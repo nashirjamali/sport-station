@@ -63,7 +63,7 @@
             </li>
 
             <!-- Event Menu Item -->
-            <li class="nav-item active">
+            <li class="nav-item ">
                 <a class="nav-link" href="event.php">
                     <i class="fas fa-fw fa-bullhorn"></i>
                     <span>Event</span>
@@ -87,7 +87,7 @@
             </li>
 
             <!-- Penyewaan Menu Item -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="penyewaan.php">
                     <i class="fas fa-fw fa-truck"></i>
                     <span>Penyewaan</span>
@@ -308,7 +308,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h1>Page event</h1>
+                    <h1>Page penyewaan</h1>
                 </div>
                 <!-- /.container-fluid -->
 

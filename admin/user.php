@@ -43,8 +43,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
-                </a>
+                    <span>Dashboard</span></a>
             </li>
 
             <!-- Divider -->
@@ -56,7 +55,7 @@
             </div>
 
             <!-- User Menu Item -->
-            <li class="nav-item active">
+            <li class="nav-item active" >
                 <a class="nav-link" href="user.php">
                     <i class="fas fa-fw fa-address-book"></i>
                     <span>Users</span>
@@ -65,7 +64,7 @@
 
             <!-- Event Menu Item -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="event.php">
                     <i class="fas fa-fw fa-bullhorn"></i>
                     <span>Event</span>
                 </a>
@@ -73,7 +72,7 @@
 
             <!-- Lapangan Menu Item -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="lapangan.php">
                     <i class="fas fa-fw fa-map-marker"></i>
                     <span>Lapangan</span>
                 </a>
@@ -81,7 +80,7 @@
 
             <!-- Penjualan Menu Item -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="penjualan.php">
                     <i class="fas fa-fw fa-shopping-cart"></i>
                     <span>Penjualan</span>
                 </a>
@@ -89,7 +88,7 @@
 
             <!-- Penyewaan Menu Item -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="penyewaan.php">
                     <i class="fas fa-fw fa-truck"></i>
                     <span>Penyewaan</span>
                 </a>
@@ -97,7 +96,7 @@
 
             <!-- Postingan Menu Item -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="postingan.php">
                     <i class="fas fa-fw fa-sticky-note"></i>
                     <span>Postingan</span>
                 </a>
