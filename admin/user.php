@@ -40,10 +40,11 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+            <li class="nav-item">
+                <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Dashboard</span>
+                </a>
             </li>
 
             <!-- Divider -->
@@ -55,7 +56,7 @@
             </div>
 
             <!-- User Menu Item -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="user.php">
                     <i class="fas fa-fw fa-address-book"></i>
                     <span>Users</span>
@@ -308,7 +309,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
+                    <h1>Page User</h1>
                 </div>
                 <!-- /.container-fluid -->
 
