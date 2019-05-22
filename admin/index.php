@@ -51,121 +51,56 @@
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Interface
+        Menu
       </div>
 
-      <!-- Nav Item - Pages Collapse Menu -->
+      <!-- User Menu Item -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="user.php">
           <i class="fas fa-fw fa-address-book"></i>
           <span>Users</span>
         </a>
       </li>
 
-      <!-- Nav Item - Utilities Collapse Menu -->
+      <!-- Event Menu Item -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-bullhorn"></i>
           <span>Event</span>
         </a>
-        <!--<div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-             <h6 class="collapse-header">Custom Utilities:</h6> 
-            <a class="collapse-item" href="utilities-color.html">Colors</a>
-            <a class="collapse-item" href="utilities-border.html">Borders</a>
-            <a class="collapse-item" href="utilities-animation.html">Animations</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
-          </div>
-        </div>-->
       </li>
 
+      <!-- Lapangan Menu Item -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-map-marker"></i>
           <span>Lapangan</span>
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <!-- <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-            <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
-          </div> -->
-        </div>
       </li>
+
+      <!-- Penjualan Menu Item -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-shopping-cart"></i>
           <span>Penjualan</span>
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-        </div>
       </li>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-        <i class="fas fa-fw fa-truck"></i>
-        <span>Penyewaan</span>
-      </a>
-      <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-      </div>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-      <i class="fas fa-fw fa-sticky-note"></i>
-      <span>Postingan</span>
-    </a>
-    <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-    </div>
-  </li>
 
-
-
-      <!-- Divider -->
-      <!-- <hr class="sidebar-divider"> -->
-
-      <!-- Heading -->
-      <!-- <div class="sidebar-heading">
-        Addons
-      </div> -->
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <!-- <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
+      <!-- Penyewaan Menu Item -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-fw fa-truck"></i>
+          <span>Penyewaan</span>
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-            <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
-          </div>
-        </div>
-      </li> -->
+      </li>
 
-      <!-- Nav Item - Charts -->
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
-      </li> -->
-
-      <!-- Nav Item - Tables -->
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span></a>
-      </li> -->
+      <!-- Postingan Menu Item -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-fw fa-sticky-note"></i>
+          <span>Postingan</span>
+        </a>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -294,7 +229,8 @@
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div class="font-weight-bold">
-                    <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
+                    <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been
+                      having.</div>
                     <div class="small text-gray-500">Emily Fowler · 58m</div>
                   </div>
                 </a>
@@ -304,7 +240,8 @@
                     <div class="status-indicator"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
+                    <div class="text-truncate">I have the photos that you ordered last month, how would you like them
+                      sent to you?</div>
                     <div class="small text-gray-500">Jae Chun · 1d</div>
                   </div>
                 </a>
@@ -314,7 +251,8 @@
                     <div class="status-indicator bg-warning"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
+                    <div class="text-truncate">Last month's report looks great, I am very happy with the progress so
+                      far, keep up the good work!</div>
                     <div class="small text-gray-500">Morgan Alvarez · 2d</div>
                   </div>
                 </a>
@@ -324,7 +262,8 @@
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
+                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people
+                      say this to all dogs, even if they aren't good...</div>
                     <div class="small text-gray-500">Chicken the Dog · 2w</div>
                   </div>
                 </a>
@@ -629,7 +568,8 @@
                   <div class="text-center">
                     <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="img/undraw_posting_photo.svg" alt="">
                   </div>
-                  <p>Add some quality, svg illustrations to your project courtesy of <a target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a constantly updated collection of beautiful svg images that you can use completely free and without attribution!</p>
+                  <p>Add some quality, svg illustrations to your project courtesy of <a target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a constantly updated collection of beautiful svg images that
+                    you can use completely free and without attribution!</p>
                   <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw &rarr;</a>
                 </div>
               </div>
@@ -640,8 +580,11 @@
                   <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
                 </div>
                 <div class="card-body">
-                  <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce CSS bloat and poor page performance. Custom CSS classes are used to create custom components and custom utility classes.</p>
-                  <p class="mb-0">Before working with this theme, you should become familiar with the Bootstrap framework, especially the utility classes.</p>
+                  <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce CSS bloat and poor
+                    page performance. Custom CSS classes are used to create custom components and custom utility
+                    classes.</p>
+                  <p class="mb-0">Before working with this theme, you should become familiar with the Bootstrap
+                    framework, especially the utility classes.</p>
                 </div>
               </div>
 
