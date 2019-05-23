@@ -312,7 +312,7 @@ require_once '../conn.php';
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h2>Tambah User Baru</h2>
+                    <h2>Tambah penjualan</h2>
 
                     <div class="row">
                         <div class="card col-md-12 col-lg-6">
