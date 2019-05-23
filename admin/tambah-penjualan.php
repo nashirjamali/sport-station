@@ -59,7 +59,7 @@ require_once '../conn.php';
             </div>
 
             <!-- User Menu Item -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="user.php">
                     <i class="fas fa-fw fa-address-book"></i>
                     <span>Users</span>
@@ -83,7 +83,7 @@ require_once '../conn.php';
             </li>
 
             <!-- Penjualan Menu Item -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="penjualan.php">
                     <i class="fas fa-fw fa-shopping-cart"></i>
                     <span>Penjualan</span>
@@ -312,7 +312,68 @@ require_once '../conn.php';
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                   
+                    <h2>Tambah User Baru</h2>
+
+                    <div class="row">
+                        <div class="card col-md-12 col-lg-6">
+                            <div class="card-body">
+
+                                <!-- Form -->
+                                <form action="">
+
+                                    <!-- Input Username -->
+                                    <div class="form-group">
+                                        <label for="nama">Nama</label>
+                                        <input type="text" class="form-control" id="nama" placeholder="Masukan nama...">
+                                    </div>
+
+                                    <!-- Input desc lapangan -->
+                                    <div class="form-group">
+                                        <label for="desc-penjualan">deskripsi penjualan</label>
+                                        <input type="text" class="form-control" id="desc-penjualan" placeholder="isi deskripsi penjualan...">
+                                    </div>
+
+                                    <!-- Input lokasi -->
+                                    <div class="form-group">
+                                        <label for="lokasi">Lokasi</label>
+                                        <input type="text" class="form-control" id="lokasi" placeholder="Masukan lokasi...">
+                                    </div>
+
+                                    <!-- Input qty -->
+                                    <div class="form-group">
+                                        <label for="unit">unit</label>
+                                        <select class="form-control" id="unit">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Input harga -->
+                                    <div class="form-group">
+                                        <label for="harga">harga</label>
+                                        <input type="text" class="form-control" id="harga" placeholder="Masukan harga...">
+                                    </div>
+
+                                    <!-- Input nama penjual -->
+                                    <div class="form-group">
+                                        <label for="nama-penjual">Penjual</label>
+                                        <input type="text" class="form-control" id="nama-penjual" placeholder="nama penjual...">
+                                    </div>
+
+                                    <!-- Button Simpan -->
+                                    <a href="penjualan.php" type="submit" class="btn btn-primary">Simpan</a>
+
+                                    <!-- Button Batal -->
+                                    <a href="penjualan.php" type="button" class="btn btn-secondary">Batal</a>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <!-- /.container-fluid -->

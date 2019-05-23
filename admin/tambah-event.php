@@ -59,7 +59,7 @@ require_once '../conn.php';
             </div>
 
             <!-- User Menu Item -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="user.php">
                     <i class="fas fa-fw fa-address-book"></i>
                     <span>Users</span>
@@ -67,7 +67,7 @@ require_once '../conn.php';
             </li>
 
             <!-- Event Menu Item -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="event.php">
                     <i class="fas fa-fw fa-bullhorn"></i>
                     <span>Event</span>
@@ -312,7 +312,62 @@ require_once '../conn.php';
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                   
+                    <h2>Tambah Event</h2>
+
+                    <div class="row">
+                        <div class="card col-md-12 col-lg-6">
+                            <div class="card-body">
+
+                                <!-- Form -->
+                                <form action="">
+
+                                    <!-- Input event -->
+                                    <div class="form-group">
+                                        <label for="nama-evemt">Nama event</label>
+                                        <input type="text" class="form-control" id="nama-evemt" placeholder="Masukan nama lapangan...">
+                                    </div>
+
+                                    <!-- Input tempat -->
+                                    <div class="form-group">
+                                        <label for="tempat-evemt">Tempat event</label>
+                                        <input type="text" class="form-control" id="tempat-evemt" placeholder="Masukan tempat...">
+                                    </div>
+
+                                    <!-- Input tanggal -->
+                                    <div class="form-group">
+                                        <label for="tanggal">tanggal event</label>
+                                        <input type="date" class="form-control" id="tanggal" placeholder="Masukan tanggal event...">
+                                    </div>
+
+                                    <!-- Input desc event -->
+                                    <div class="form-group">
+                                        <label for="desc-lapangan">deskripsi Lapangan</label>
+                                        <input type="text" class="form-control" id="desc-lapangan" placeholder="isi deskripsi lapangan...">
+                                    </div>
+
+                                    <!-- Input gambar -->
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">gambar lapangan</label>
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    </div>
+
+                                    <!-- Input pembuat event -->
+                                    <div class="form-group">
+                                        <label for="username">username</label>
+                                        <input type="text" class="form-control" id="username" placeholder="Masukan username...">
+                                    </div>
+
+                                    <!-- Button Simpan -->
+                                    <a href="event.php" type="submit" class="btn btn-primary">Simpan</a>
+
+                                    <!-- Button Batal -->
+                                    <a href="event.php" type="button" class="btn btn-secondary">Batal</a>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <!-- /.container-fluid -->

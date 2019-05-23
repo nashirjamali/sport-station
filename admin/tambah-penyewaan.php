@@ -59,7 +59,7 @@ require_once '../conn.php';
             </div>
 
             <!-- User Menu Item -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="user.php">
                     <i class="fas fa-fw fa-address-book"></i>
                     <span>Users</span>
@@ -91,7 +91,7 @@ require_once '../conn.php';
             </li>
 
             <!-- Penyewaan Menu Item -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="penyewaan.php">
                     <i class="fas fa-fw fa-truck"></i>
                     <span>Penyewaan</span>
@@ -312,7 +312,63 @@ require_once '../conn.php';
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                   
+                    <h2>Tambah Penyewaan</h2>
+
+                    <div class="row">
+                        <div class="card col-md-12 col-lg-6">
+                            <div class="card-body">
+
+                                <!-- Form -->
+                                <form action="">
+
+                                    <!-- Input nama -->
+                                    <div class="form-group">
+                                        <label for="nama">Nama</label>
+                                        <input type="text" class="form-control" id="nama" placeholder="Masukan nama...">
+                                    </div>
+
+                                    <!-- Input desc -->
+                                    <div class="form-group">
+                                        <label for="desc">deskripsi</label>
+                                        <input type="text" class="form-control" id="desc" placeholder="isi deskripsi...">
+                                    </div>
+
+                                    <!-- Input tanggal -->
+                                    <div class="form-group">
+                                        <label for="tanggal">tanggal</label>
+                                        <input type="date" class="form-control" id="tanggal" placeholder="tanggal...">
+                                    </div>
+
+                                    <!-- Input harga -->
+                                    <div class="form-group">
+                                        <label for="harga">Harga</label>
+                                        <input type="text" class="form-control" id="harga" placeholder="harga...">
+                                    </div>
+
+                                    <!-- Input Username -->
+                                    <div class="form-group">
+                                        <label for="username">Username</label>
+                                        <input type="text" class="form-control" id="username" placeholder="Masukan username...">
+                                    </div>
+
+                                    <!-- Input link -->
+                                    <div class="form-group">
+                                        <label for="link">Link</label>
+                                        <input type="URL" class="form-control" id="link" placeholder="www">
+                                    </div>
+
+                                    <!-- Button Simpan -->
+                                    <a href="penyewaan.php" type="submit" class="btn btn-primary">Simpan</a>
+
+                                    <!-- Button Batal -->
+                                    <a href="penyewaan.php" type="button" class="btn btn-secondary">Batal</a>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
                 <!-- /.container-fluid -->

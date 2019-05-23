@@ -59,7 +59,7 @@ require_once '../conn.php';
             </div>
 
             <!-- User Menu Item -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="user.php">
                     <i class="fas fa-fw fa-address-book"></i>
                     <span>Users</span>
@@ -75,7 +75,7 @@ require_once '../conn.php';
             </li>
 
             <!-- Lapangan Menu Item -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="lapangan.php">
                     <i class="fas fa-fw fa-map-marker"></i>
                     <span>Lapangan</span>
@@ -312,7 +312,53 @@ require_once '../conn.php';
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                   
+                    <h2>Tambah Lapangan</h2>
+
+                    <div class="row">
+                        <div class="card col-md-12 col-lg-6">
+                            <div class="card-body">
+
+                                <!-- Form -->
+                                <form action="">
+
+                                <!-- pilih kategori lapangan -->
+                                    <div class="form-group">
+                                        <label for="pilih">Pilih</label>
+                                        <select class="form-control" id="pilih">
+                                            <option value="lomba">Lomba</option>
+                                            <option value="kegiatan">kegiatan</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Input lapangan -->
+                                    <div class="form-group">
+                                        <label for="nama-lapangan">Nama lapangan</label>
+                                        <input type="text" class="form-control" id="nama-lapangan" placeholder="Masukan nama lapangan...">
+                                    </div>
+
+                                    <!-- Input lokasi -->
+                                    <div class="form-group">
+                                        <label for="lokasi">Lokasi</label>
+                                        <input type="text" class="form-control" id="lokasi" placeholder="Masukan lokasi...">
+                                    </div>
+
+                                    <!-- Input link -->
+                                    <div class="form-group">
+                                        <label for="link">Link</label>
+                                        <input type="URL" class="form-control" id="link" placeholder="www">
+                                    </div>
+
+                                    <!-- Button Simpan -->
+                                    <a href="lapangan.php" type="submit" class="btn btn-primary">Simpan</a>
+
+                                    <!-- Button Batal -->
+                                    <a href="lapangan.php" type="button" class="btn btn-secondary">Batal</a>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <!-- /.container-fluid -->

@@ -344,7 +344,7 @@ require_once '../conn.php';
                                     </div>
 
                                     <!-- Button Simpan -->
-                                    <button type="submit" class="btn btn-primary">Simpan</button>
+                                    <a href="user.php" type="submit" class="btn btn-primary">Simpan</a>
 
                                     <!-- Button Batal -->
                                     <a href="user.php" type="button" class="btn btn-secondary">Batal</a>
