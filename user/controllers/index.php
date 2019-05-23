@@ -34,7 +34,7 @@
                 <li><a href="#feature">Fitur</a></li>
                 <li><a href="#portfolio">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact">Sign Up</a></li>
+                <li><a href="register.php">Sign Up</a></li>
               </ul>
             </div>
           </div>
@@ -46,7 +46,7 @@
           <h2 class="top-title">Sports & Daily Life</h2>
           <h3 class="title">Sport Station</h3>
           <h4 class="sub-title">Healthy Start From Ourselves</h4>
-          <button type="submit" class="btn btn-submit">Login</button>
+          <a href="login.php" class="btn btn-submit">Login</a>
         </div>
       </div>
     </div>
@@ -220,12 +220,12 @@
           <div class="section-title">
             <h2 class="head-title black">Contact Us</h2>
             <hr class="botm-line">
-            <p class="sec-para black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+            <p class="sec-para black">Hi, jika ingin berkontribusi dengan kami dalam platform ini atau keinginan untuk bekerja sama.<br>Langsung saja kirim email kamu atau gunakan form dibawah ini.</p>
           </div>
         </div>
         <div class="col-md-12 col-sm-12">
           <div class="col-md-4 col-sm-6" style="padding-left:0px;">
-            <h3 class="cont-title">Email Us</h3>
+            <h3 class="cont-title">Email</h3>
             <div id="sendmessage">Your message has been sent. Thank you!</div>
             <div id="errormessage"></div>
             <div class="contact-info">
@@ -256,9 +256,9 @@
           <div class="col-md-4 col-sm-6">
             <h3 class="cont-title">Visit Us</h3>
             <div class="location-info">
-              <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Via Principe Amedeo 9, Torino, Italy</p>
-              <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: 0039 333 12 68 347</p>
-              <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href="" class="link-dec">hi@yourdomain.com</a></p>
+              <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Raya Kedung Baruk No.98, Surabaya</p>
+              <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: 0821-4263-4321</p>
+              <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href="" class="link-dec">sportstation@gmail.com</a></p>
             </div>
           </div>
           <div class="col-md-4">
