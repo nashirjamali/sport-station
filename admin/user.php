@@ -313,6 +313,8 @@ require_once '../conn.php';
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <h2>List User</h2>
+                    
+                    <a href="tambah-user.php" class="btn btn-primary mt-5 mb-3">Tambah User Baru</a>
 
                     <table class="table">
                         <thead class="thead-dark">

@@ -312,7 +312,49 @@ require_once '../conn.php';
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                   
+
+                    <h2>Tambah User Baru</h2>
+
+                    <div class="row">
+                        <div class="card col-md-12 col-lg-6">
+                            <div class="card-body">
+
+                                <!-- Form -->
+                                <form action="">
+
+                                    <!-- Input Username -->
+                                    <div class="form-group">
+                                        <label for="username">Username</label>
+                                        <input type="text" class="form-control" id="username" placeholder="Masukan Username...">
+                                    </div>
+
+                                    <!-- Input Password -->
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" id="password" placeholder="Masukan Password...">
+                                    </div>
+
+                                    <!-- Select Role -->
+                                    <div class="form-group">
+                                        <label for="role">Role</label>
+                                        <select class="form-control" id="role">
+                                            <option value="admin">Admin</option>
+                                            <option value="user">User</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Button Simpan -->
+                                    <button type="submit" class="btn btn-primary">Simpan</button>
+
+                                    <!-- Button Batal -->
+                                    <a href="user.php" type="button" class="btn btn-secondary">Batal</a>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
                 <!-- /.container-fluid -->
