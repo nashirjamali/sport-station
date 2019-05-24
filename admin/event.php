@@ -313,6 +313,7 @@ require_once '../conn.php';
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <h1>Page event</h1>
+                    <a href="tambah-event.php" type="button" class="btn btn-primary">tambah event baru</a>
                 </div>
                 <!-- /.container-fluid -->
 

@@ -313,68 +313,47 @@ require_once '../conn.php';
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <h2>List User</h2>
-                    
+
                     <a href="tambah-user.php" class="btn btn-primary mt-5 mb-3">Tambah User Baru</a>
 
+                    <?php
+
+                    $query = 'SELECT * FROM users';
+                    $users = mysqli_query($conn, $query);
+
+                    ?>
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col">Id</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            <?php foreach ($users as $user) : ?>
+                                <tr>
+                                    <td><?php echo $user['id'] ?></td>
+                                    <td><?php echo $user['username'] ?></td>
+                                    <td><?php echo $user['role'] ?></td>
 
-                    <table class="table">
-                        <thead class="thead-light">
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
+                                    <td class="d-flex">
+                                        <!-- Edit -->
+                                        <form action="" method="get">
+                                            <input type="hidden" value="<?= $user['id'] ?>" name="id">
+                                            <button class="btn btn-secondary" type="submit"> Edit </button>
+                                        </form>
+
+                                        <!-- Hapus -->
+                                        <form action="delete-user.php" method="get" >
+                                            <input type="hidden" value="<?= $user['id'] ?>" name="id">
+                                            <button class="btn btn-danger"> Hapus </button>
+                                        </form>
+
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
 

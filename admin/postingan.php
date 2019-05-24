@@ -313,6 +313,7 @@ require_once '../conn.php';
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <h1>Page postingan</h1>
+                    <a href="tambah-postingan.php" type="button" class="btn btn-primary">tambah postingan</a>
                 </div>
                 <!-- /.container-fluid -->
 

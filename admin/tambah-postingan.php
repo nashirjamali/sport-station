@@ -59,7 +59,7 @@ require_once '../conn.php';
             </div>
 
             <!-- User Menu Item -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="user.php">
                     <i class="fas fa-fw fa-address-book"></i>
                     <span>Users</span>
@@ -99,7 +99,7 @@ require_once '../conn.php';
             </li>
 
             <!-- Postingan Menu Item -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="postingan.php">
                     <i class="fas fa-fw fa-sticky-note"></i>
                     <span>Postingan</span>
@@ -312,7 +312,50 @@ require_once '../conn.php';
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                   
+                    <h2>Tambah Penyewaan</h2>
+
+                    <div class="row">
+                        <div class="card col-md-12 col-lg-6">
+                            <div class="card-body">
+
+                                <!-- Form -->
+                                <form action="">
+
+                                    <!-- Input nama -->
+                                    <div class="form-group">
+                                        <label for="judul">judul</label>
+                                        <input type="text" class="form-control" id="judul" placeholder="judul...">
+                                    </div>
+
+                                    <!-- Input isi -->
+                                    <div class="form-group">
+                                        <label for="isi">isi</label>
+                                        <input type="text" class="form-control" id="isi" placeholder="isi...">
+                                    </div>
+
+                                    <!-- Input tanggal -->
+                                    <div class="form-group">
+                                        <label for="tanggal">tanggal</label>
+                                        <input type="date" class="form-control" id="tanggal" placeholder="tanggal...">
+                                    </div>
+
+                                    <!-- Input waktu -->
+                                    <div class="form-group">
+                                        <label for="waktu">waktu</label>
+                                        <input type="text" class="form-control" id="waktu" placeholder="tanggal...">
+                                    </div>
+
+                                    <!-- Button Simpan -->
+                                    <a href="postingan.php" type="submit" class="btn btn-primary">Simpan</a>
+
+                                    <!-- Button Batal -->
+                                    <a href="postingan.php" type="button" class="btn btn-secondary">Batal</a>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <!-- /.container-fluid -->
