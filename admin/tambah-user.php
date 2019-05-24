@@ -58,6 +58,8 @@ require_once '../conn.php';
                 Menu
             </div>
 
+            
+
             <!-- User Menu Item -->
             <li class="nav-item active">
                 <a class="nav-link" href="user.php">
@@ -320,24 +322,31 @@ require_once '../conn.php';
                             <div class="card-body">
 
                                 <!-- Form -->
-                                <form action="">
+                                <form action="" class="was-validated">
 
                                     <!-- Input Username -->
                                     <div class="form-group">
-                                        <label for="username">Username</label>
-                                        <input type="text" class="form-control" id="username" placeholder="Masukan Username...">
+                                        <label for="validationTooltip01">Username</label>
+                                        <input type="text" class="form-control" id="validationTooltip01" placeholder="Masukan Username..." required>
+                                        <div class="invalid-feedback">
+                                            Please enter Username
+                                        </div>
                                     </div>
 
                                     <!-- Input Password -->
                                     <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <input type="password" class="form-control" id="password" placeholder="Masukan Password...">
+                                        <label for="validationTooltip01">Password</label>
+                                        <input type="password" class="form-control" id="validationTooltip01" placeholder="Masukan Password..." required>
+                                        <div class="invalid-feedback">
+                                            Please enter password
+                                        </div>
+
                                     </div>
 
                                     <!-- Select Role -->
                                     <div class="form-group">
                                         <label for="role">Role</label>
-                                        <select class="form-control" id="role">
+                                        <select class="form-control" id="role" disabled>
                                             <option value="admin">Admin</option>
                                             <option value="user">User</option>
                                         </select>

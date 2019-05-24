@@ -58,6 +58,8 @@ require_once '../conn.php';
                 Menu
             </div>
 
+           
+
             <!-- User Menu Item -->
             <li class="nav-item">
                 <a class="nav-link" href="user.php">
@@ -313,7 +315,57 @@ require_once '../conn.php';
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <h1>Page penyewaan</h1>
-                    <a href="tambah-penyewaan.php" type="button" class="btn btn-primary">tambah penyewaan</a>
+                    <a href="tambah-penyewaan.php" type="button" class="btn btn-primary mt-5 mb-3">tambah penyewaan</a>
+
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Nama </th>
+                                <th scope="col">Deksripsi barang</th>
+                                <th scope="col">Tanggal</th>
+                                <th scope="col">Harga</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Body Gym Dipstand Handle</td>
+                                <td>Mengoptimalkan perkembangan dada dan trisep dan meminimalkan tangan,
+                                    pergelangan tangan, dan stres siku</td>
+                                <td> 6 May 2018</td>
+                                <td>Rp 1.750.000</td>
+                                <td>napoleon</td>
+                                <td>https://www.tokoalatfitness.com/body-gym-dipstand-handle.html</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Agility Ladder 4M</td>
+                                <td>Agility Ladder merupakan peralatan fitnes yang digunakan dalam
+                                    berbagai cabang olahraga untuk meningkatkan agilitas,
+                                    fleksibilitas dan kecepatan pada atlet.</td>
+                                <td> 30 October 2017</td>
+                                <td>Rp 750.000</td>
+                                <td>sonya </td>
+                                <td>https://www.tokoalatfitness.com/agility-ladder-4m-8-anak-tangga.html</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Elliptical Cross Trainer AFO-01 Body Gym</td>
+                                <td>Memperkuat fungsi jantung dan paru-paru</td>
+                                <td>29 June 2018</td>
+                                <td>Rp 3.900.000</td>
+                                <td>Agus</td>
+                                <td>https://www.tokoalatfitness.com/alat-fitness-outdoor-elliptical-cross-trainer-afo-01-body-gym.html</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
                 </div>
                 <!-- /.container-fluid -->
 

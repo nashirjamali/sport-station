@@ -58,6 +58,8 @@ require_once '../conn.php';
                 Menu
             </div>
 
+          
+
             <!-- User Menu Item -->
             <li class="nav-item active">
                 <a class="nav-link" href="user.php">
@@ -313,7 +315,7 @@ require_once '../conn.php';
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <h2>List User</h2>
-                    
+
                     <a href="tambah-user.php" class="btn btn-primary mt-5 mb-3">Tambah User Baru</a>
 
                     <table class="table">

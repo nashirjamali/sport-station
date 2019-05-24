@@ -58,6 +58,7 @@ require_once '../conn.php';
                 Menu
             </div>
 
+           
             <!-- User Menu Item -->
             <li class="nav-item">
                 <a class="nav-link" href="user.php">
@@ -321,7 +322,7 @@ require_once '../conn.php';
                                 <!-- Form -->
                                 <form action="">
 
-                                <!-- pilih kategori lapangan -->
+                                    <!-- pilih kategori lapangan -->
                                     <div class="form-group">
                                         <label for="pilih">Pilih</label>
                                         <select class="form-control" id="pilih">
@@ -345,7 +346,7 @@ require_once '../conn.php';
                                     <!-- Input link -->
                                     <div class="form-group">
                                         <label for="link">Link</label>
-                                        <input type="URL" class="form-control" id="link" placeholder="www">
+                                        <input formaction="URL" class="form-control" id="link" placeholder="http://...">
                                     </div>
 
                                     <!-- Button Simpan -->
