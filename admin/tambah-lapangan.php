@@ -5,12 +5,10 @@ require_once '../conn.php';
 <?php
 
 if (isset($_POST['btn-simpan'])) {
-    $idUser = mysqli_query($conn, "SELECT id FROM lapangan WHERE nama_lapangan = " . $nama_lapangan);
-
-    $kategori_id = $_POST['kategori_id'];
-    $nama_lapangan = $_POST['nama_lapangan'];
-    $lokasi = $_POST['lokasi'];
-    $link = $_POST['link'];
+    $kategori_id = htmlspecialchars($_POST['kategori_id']);
+    $nama_lapangan = htmlspecialchars($_POST['nama_lapangan']);
+    $lokasi = htmlspecialchars($_POST['lokasi']);
+    $link = htmlspecialchars($_POST['link']);
 
     $create = mysqli_query($conn, "INSERT INTO `lapangan`(`kategori_id`, `nama_lapangan`, `lokasi`, `link`) VALUE ('$kategori_id', '$nama_lapangan', '$lokasi', '$link')");
 
@@ -122,9 +120,9 @@ if (isset($_POST['btn-simpan'])) {
 
             <!-- Postingan Menu Item -->
             <li class="nav-item">
-                <a class="nav-link" href="postingan.php">
+                <a class="nav-link" href="lapangan.php">
                     <i class="fas fa-fw fa-sticky-note"></i>
-                    <span>Postingan</span>
+                    <span>Lapangan</span>
                 </a>
             </li>
 
@@ -341,7 +339,7 @@ if (isset($_POST['btn-simpan'])) {
                             <div class="card-body">
 
                                 <!-- Form -->
-                                <form action="">
+                                <form action="" method="post">
 
                                     <!-- pilih kategori lapangan -->
                                     <div class="form-group">

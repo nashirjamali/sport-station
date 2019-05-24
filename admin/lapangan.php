@@ -102,9 +102,9 @@ require_once '../conn.php';
 
             <!-- Postingan Menu Item -->
             <li class="nav-item">
-                <a class="nav-link" href="postingan.php">
+                <a class="nav-link" href="lapangan.php">
                     <i class="fas fa-fw fa-sticky-note"></i>
-                    <span>Postingan</span>
+                    <span>Lapangan</span>
                 </a>
             </li>
 
@@ -314,41 +314,49 @@ require_once '../conn.php';
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h1>Page lapangan</h1>
-                    <a href="tambah-lapangan.php" type="button" class="btn btn-primary mt-5 mb-3">tambah lapangan </a>
+                    <h1>Page Lapangan</h1>
+                    <a href="tambah-lapangan.php" type="button" class="btn btn-primary mt-5 mb-3">tambah lapangan</a>
+                    <?php
 
+                    $query = 'SELECT * FROM lapangan';
+                    $lapangans = mysqli_query($conn, $query);
+
+                    ?>
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Nama Lapangan</th>
+                                <th scope="col">Nama Lapangan </th>
                                 <th scope="col">Lokasi</th>
                                 <th scope="col">Link</th>
+                                <th scope="col">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Lapangan mas</td>
-                                <td>Jl.Pakis Wetan</td>
-                                <td>https://www.google.com/maps?q=lapangan+thor&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjZyMrnm7PiAhWUheYKHb0QBrcQ_AUIDygC</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Lapangan cony</td>
-                                <td>Jl. Gubeng</td>
-                                <td>https://www.google.com/maps?q=lapangan+thor&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjZyMrnm7PiAhWUheYKHb0QBrcQ_AUIDygC</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Jaya Raya Sports Hall Training Center</td>
-                                <td>jakarta</td>
-                                <td>https://www.google.com/maps?q=lapangan+thor&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjZyMrnm7PiAhWUheYKHb0QBrcQ_AUIDygC</td>
-                            </tr>
+                            <?php foreach ($lapangans as $lapangan) : ?>
+                                <tr>
+                                    <td><?php echo $lapangan['nama_lapangan']   ?></td>
+                                    <td><?php echo $lapangan['lokasi']   ?></td>
+                                    <td><?php echo $lapangan['link']   ?></td>
+                                    <td class="d-flex">
+                                        <!-- Edit -->
+                                        <form action="" method="get">
+                                            <input type="hidden" value="<?= $user['id'] ?>" name="id">
+                                            <button class="btn btn-secondary" type="submit"> Edit </button>
+                                        </form>
 
+                                        <!-- Hapus -->
+                                        <form action="delete-lapangan.php" method="get" >
+                                            <input type="hidden" value="<?= $lapangan['id'] ?>" name="id">
+                                            <button class="btn btn-danger"> Hapus </button>
+                                        </form>
+
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
 
                     </table>
+
                 </div>
                 <!-- /.container-fluid -->
 
