@@ -346,7 +346,7 @@ require_once '../conn.php';
                                         </form>
 
                                         <!-- Hapus -->
-                                        <form action="">
+                                        <form action="delete-user.php" method="get" >
                                             <input type="hidden" value="<?= $user['id'] ?>" name="id">
                                             <button class="btn btn-danger"> Hapus </button>
                                         </form>
