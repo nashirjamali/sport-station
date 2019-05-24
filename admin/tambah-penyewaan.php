@@ -1,7 +1,33 @@
 <?php
 require_once '../conn.php';
 ?>
+<!-- Backend Insert Data -->
+<?php
 
+if (isset($_POST['btn-simpan'])) {
+    $nama = htmlspecialchars($_POST['nama']);
+    $deskripsi = htmlspecialchars($_POST['deskripsi']);
+    $tanggal = htmlspecialchars($_POST['tanggal']);
+    $harga = htmlspecialchars($_POST['harga']);
+    $link = htmlspecialchars($_POST['link']);
+    $username = htmlspecialchars($_POST['username']);
+
+
+
+    $tes = "INSERT INTO penyewaan(nama, deskripsi, tanggal, harga,user, link) VALUES ('$nama', '$deskripsi', '$tanggal', $harga,'$username','$link')";
+
+    $create = mysqli_query($conn, "INSERT INTO penyewaan (id,nama, deskripsi, tanggal, harga,user,link) VALUES (NULL,'$nama', '$deskripsi', '$tanggal', '$harga','$username', '$link')");
+    
+    if ($create) {
+    header( "Location: penyewaan.php" );
+
+//        echo "Sukses boss";
+    } else {
+        echo $tes;
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -321,49 +347,49 @@ require_once '../conn.php';
                             <div class="card-body">
 
                                 <!-- Form -->
-                                <form action="">
+                                <form action="" method="post">
 
                                     <!-- Input nama -->
                                     <div class="form-group">
                                         <label for="nama">Nama</label>
-                                        <input type="text" class="form-control" id="nama" placeholder="Masukan nama...">
+                                        <input name="nama" type="text" class="form-control" id="nama" placeholder="Masukan nama...">
                                     </div>
 
                                     <!-- Input desc -->
                                     <div class="form-group">
                                         <label for="desc">deskripsi</label>
-                                        <input type="text" class="form-control" id="desc" placeholder="isi deskripsi...">
+                                        <input name="deskripsi" type="text" class="form-control" id="desc" placeholder="isi deskripsi...">
                                     </div>
 
                                     <!-- Input tanggal -->
                                     <div class="form-group">
                                         <label for="tanggal">tanggal</label>
-                                        <input type="date" class="form-control" id="tanggal" placeholder="tanggal...">
+                                        <input name="tanggal" type="date" class="form-control" id="tanggal" placeholder="tanggal...">
                                     </div>
 
                                     <!-- Input harga -->
                                     <div class="form-group">
                                         <label for="harga">Harga</label>
-                                        <input type="text" class="form-control" id="harga" placeholder="harga...">
+                                        <input name="harga" type="text" class="form-control" id="harga" placeholder="harga...">
                                     </div>
 
                                     <!-- Input Username -->
                                     <div class="form-group">
                                         <label for="username">Username</label>
-                                        <input type="text" class="form-control" id="username" placeholder="Masukan username...">
+                                        <input name="username" type="text" class="form-control" id="username" placeholder="Masukan username...">
                                     </div>
 
                                     <!-- Input link -->
                                     <div class="form-group">
                                         <label for="link">Link</label>
-                                        <input type="URL" class="form-control" id="link" placeholder="www">
+                                        <input name="link" type="URL" class="form-control" id="link" placeholder="www">
                                     </div>
 
                                     <!-- Button Simpan -->
-                                    <a href="penyewaan.php" type="submit" class="btn btn-primary">Simpan</a>
+                                    <button name="btn-simpan" type="submit" class="btn btn-primary">Simpan</button>
 
                                     <!-- Button Batal -->
-                                    <a href="penyewaan.php" type="button" class="btn btn-secondary">Batal</a>
+                                    <button type="button" class="btn btn-secondary">Batal</button>
 
                                 </form>
 

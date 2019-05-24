@@ -30,10 +30,10 @@
             </div>
             <div class="collapse navbar-collapse navbar-right" id="mynavbar">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#header">Home</a></li>
-                <li><a href="#feature">Event</a></li>
-                <li><a href="#portfolio">Lapangan</a></li>
-                <li><a href="#contact">Edukasi</a></li>
+                <li><a href="#header">Home</a></li>
+                <li class="active"><a href="event.php">Event</a></li>
+                <li><a href="lapangan.php">Lapangan</a></li>
+                <li><a href="">Edukasi</a></li>
                 <li><a href="#contact">Program Diet</a></li>
                 <li><a href="register.php">Sign Up</a></li>
               </ul>
