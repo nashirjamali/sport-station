@@ -366,7 +366,7 @@ if (isset($_POST['btn-simpan'])) {
                             <div class="card-body">
 
                                 <!-- Form -->
-                                <form action="">
+                                <form action="" method="post">
 
                                     <!-- Input pembuat event -->
                                     <div class="form-group">
