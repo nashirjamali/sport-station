@@ -97,7 +97,7 @@
             </div>
           </div>
           </a>
-          <a href="#">
+          <a href="edukasi.php">
           <div class="col-md-6 wow fadeInRight delay-04s">
             <div class="icon head-title">
               <i class="fa fa-book"></i>
@@ -107,19 +107,7 @@
               <p class="txt-para">Temukan cara hidup sehat dengan banyak cara dari segala usia. </p>
             </div>
           </div>
-          </a>
-          <a href="#">
-          <div class="col-md-6 wow fadeInRight delay-04s">
-            <div class="icon head-title">
-              <i class="fa fa-lightbulb-o"></i>
-            </div>
-            <div class="icon-text">
-              <h3 class="head-title">Tata Cara Diet</h3>
-              <p class="txt-para">Cara menurunkan berat badan tanpa bahaya kesehatan. </p>
-            </div>
-          </div>
-          </a>
-          <a href="#">
+          <a href="persewaan.php">
           <div class="col-md-6 wow fadeInRight delay-06s">
             <div class="icon head-title">
               <i class="fa fa-truck"></i>

@@ -1,10 +1,15 @@
+<?php
+require_once '../../conn.php';
+
+$penyewaans = mysqli_query($conn, "SELECT * FROM penyewaan");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sport Station - Event Page</title>
+    <title>Sport Station - Home Page</title>
     <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
@@ -30,10 +35,10 @@
                         </div>
                         <div class="collapse navbar-collapse navbar-right" id="mynavbar">
                             <ul class="nav navbar-nav">
-                                <li><a href="index.php">Home</a></li>
-                                <li><a href="event.php">Event</a></li>
-                                <li><a href="lapangan.php">Lapangan</a></li>
-                                <li class="active"><a href="edukasi.php">Edukasi</a></li>
+                                <li class="active"><a href="index.php">Home</a></li>
+                                <li><a href="#feature">Fitur</a></li>
+                                <li><a href="#portfolio">About Us</a></li>
+                                <li><a href="#contact">Contact</a></li>
                                 <li><a href="register.php">Sign Up</a></li>
                             </ul>
                         </div>
@@ -53,79 +58,25 @@
     </header>
     <!--/ header-->
     <!---->
-
     <section id="cta-1">
-        <div class="container">
+    <div class="container">
+            <h2>Persewaan</h2>
+            <br><br>
             <div class="row">
-                <div class="col-md-4 wow fadeInLeft delay-05s">
-                    <div class="image">
-                        <img src="../assets/img/christine.jpg" style="">
-                    </div>
-                    <div class="col-md-12">
-                        <div class="description">
-                            <h3 class="head-title"><b>Olahraga Basket</b></h3>
-                            <hr class="botm-line">
-
-                            <p>Bermain olahraga bola basket dapan menyehatkan badan dan bisa menjaga berat badan yang ideal. </p>
-
+                <?php foreach ($penyewaans as $key) : ?>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $key['nama'] ?></h5>
+                                <h6 class="card-subtitle mb-2 text-muted"><?php echo $key['deskripsi'] ?></h6>
+                                <a href="<?= $key['link'] ?>" class="card-link" target="_blank">Sewa Sekarang</a>
+                            </div>
+                            <br><br>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 wow fadeInLeft delay-05s">
-                    <div class="image">
-                        <img src="../assets/img/christine.jpg" style="">
-                    </div>
-                    <div class="col-md-12">
-                        <div class="description">
-                            <h3 class="head-title"><b>Resman-Smasaden</b></h3>
-                            <hr class="botm-line">
-
-                            <p>Honda DBL East Nusa Tenggara Series 2017. Sebelum menginjak opening party, para crew Honda DBL mampir ke SMAN 4 Kupang untuk melakukan roadshow. Seperti apa sih keseruannya?</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 wow fadeInLeft delay-05s">
-                    <div class="image">
-                        <img src="../assets/img/christine.jpg" style="">
-                    </div>
-                    <div class="col-md-12">
-                        <div class="description">
-                            <h3 class="head-title"><b>Resman-Smasaden</b></h3>
-                            <hr class="botm-line">
-
-                            <p>Honda DBL East Nusa Tenggara Series 2017. Sebelum menginjak opening party, para crew Honda DBL mampir ke SMAN 4 Kupang untuk melakukan roadshow. Seperti apa sih keseruannya?</p>
-
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
-
-
-    </section>
-    <!---->
-    </section>
-
-    <section id="feature" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="image">
-                        <img src="../assets/img/cfd.jpg" style="">
-                    </div>
-
-                </div>
-                <div class="col-md-6">
-                    <div class="description">
-                        <h3 class="head-title"><b>Pemkot Surabaya Tambah Lokasi Car Free Day</b></h3>
-                        <hr class="botm-line">
-
-                        <p>Penambahan lokasi CFD yang dilakukan tiada lain adalah untuk mengajak masyarakat ikut serta dalam memberikan konstribusi bagi terciptanya kualitas udara di Kota Pahlawan yang bersih dan sehat. Tak hanya itu, lanjut Musdiq, kegiatan ini juga diharapkan mampu meyediakan tempat bagi masyarakat untuk bersosialiasi dan berolahraga.</p>
-
-                    </div>
-                </div>
-            </div>
     </section>
     <!---->
     <!---->

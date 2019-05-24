@@ -36,7 +36,7 @@ $lapangans = mysqli_query($conn, "SELECT * FROM lapangan");
                         </div>
                         <div class="collapse navbar-collapse navbar-right" id="mynavbar">
                             <ul class="nav navbar-nav">
-                                <li><a href="#header">Home</a></li>
+                                <li><a href="index.php">Home</a></li>
                                 <li><a href="event.php">Event</a></li>
                                 <li class="active"><a href="lapangan.php">Lapangan</a></li>
                                 <li><a href="edukasi.php">Edukasi</a></li>
@@ -62,7 +62,7 @@ $lapangans = mysqli_query($conn, "SELECT * FROM lapangan");
 
     <section id="cta-1">
         <div class="container">
-            <h2>Lapangan</h2>
+            <h2>Persewaan</h2>
             <br><br>
             <div class="row">
                 <?php foreach ($lapangans as $key) : ?>
