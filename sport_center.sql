@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2019 at 07:15 PM
+-- Generation Time: May 24, 2019 at 06:30 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -46,10 +46,10 @@ CREATE TABLE `event` (
 INSERT INTO `event` (`id`, `nama_kegiatan`, `tempat_dan_waktu`, `tanggal`, `deskripsi`, `gambar`, `pembuat`, `kategori_id`) VALUES
 (1, 'Lomba Lari Maraton ', 'Pantai Ria Kenjera Surabaya', '2019-05-31', 'lomba lari maraton untuk umum jarak 1000m Pukul 07:00', 'lari.jpg', 'Universitas Stikom Surabaya', 2),
 (2, 'car free day', 'Taman Bungkul \r\n', '2019-05-26', 'senam zumba di tengah tengah taman Pukul 07:00', 'bungkul.jpg', 'komunitas zumba dunia', 1),
-(3, 'car free day', 'halaman masjid agung & 06:00', '2019-05-26', 'jalan sehat berhadiah ', 'jalan.jpg', 'remaja masjid agung', 1),
-(4, 'lomba angkat beban', 'Apartemen Gunawangsa mer & 20:00', '2019-05-30', 'lomba mengangkat beban dengan kategori 1kg, 2kg dan 3kg', 'angkatbeban.jpg', 'gym gunawangsa', 2),
-(5, 'makan sehat', 'dinas pangan kota surabaya & 07:00', '2019-05-27', 'kegiatan dari dinas pangan untuk memberi tahu makanan sehat', 'dinas.jpg', 'dinas pangan indonesia', 1),
-(6, 'liga mahasiswa', 'mangga dua & 10:00', '2019-05-31', 'lomba antar universitas se surabaya', 'lima.jpg', 'lima', 2);
+(3, 'car free day', 'halaman masjid agung', '2019-05-26', 'jalan sehat berhadiah Pukul 07:00', 'jalan.jpg', 'remaja masjid agung', 1),
+(4, 'lomba angkat beban', 'Apartemen Gunawangsa mer', '2019-05-30', 'lomba mengangkat beban dengan kategori 1kg, 2kg dan 3kg Pukul 07:00', 'angkatbeban.jpg', 'gym gunawangsa', 2),
+(5, 'makan sehat', 'dinas pangan kota surabaya ', '2019-05-27', 'kegiatan dari dinas pangan untuk memberi tahu makanan sehat Pukul 07:00', 'dinas.jpg', 'dinas pangan indonesia', 1),
+(6, 'liga mahasiswa', 'mangga dua', '2019-05-31', 'lomba antar universitas se surabaya Pukul 07:00', 'lima.jpg', 'lima', 2);
 
 -- --------------------------------------------------------
 
@@ -192,16 +192,16 @@ CREATE TABLE `postingan` (
 --
 
 INSERT INTO `postingan` (`id`, `penulis_id`, `judul`, `isi`, `tanggal`, `waktu`) VALUES
-(1, '1', 'program diet', 'menurunkan berat badan', '2019-05-23', '07:00:00'),
-(2, '2', 'edukasi', 'atribute berolahraga yg benar', '2019-05-23', '24:00:00'),
-(3, '3', 'edukasi', 'program makanan sehat', '2019-05-23', '00:00:24'),
-(4, '4', 'edukasi', 'program lari yang benar', '2019-05-23', '24:00:00'),
-(5, '5', 'edukasi', 'cara mengatur pernafasan', '2019-05-16', '24:00:00'),
-(6, '1', 'program diet', '7 hari program makan untuk diet', '2019-05-23', '24:00:00'),
-(7, '2', 'edukasi', 'cara angkat beban yang benar', '2019-05-23', '24:00:00'),
-(8, '3', 'edukasi', 'konsultasi kesehatan', '2019-05-23', '24:00:00'),
-(9, '4', 'edukasi', 'mengukur berat badan ideal', '2019-05-23', '24:00:00'),
-(10, '5', 'edukasi', 'cara membuat badan menjadi sispek', '2019-05-23', '24:00:00');
+(1, '1', '7 hari program diet', 'prosedure program 7 hari untuk menurunkan berat badan dengan baik dan benar', '2019-05-23', '07:00:00'),
+(2, '2', 'edukasi kesehatan berolahraga untuk anak anak', 'Cara membuat stamina anak terjaga dengan berolahraga dengan teratur', '2019-05-23', '24:00:00'),
+(3, '3', 'edukasi kesehatan berolahraga untuk orang dewasa', 'tata cara melakukan olahraga yang baik dan benar ditengah tengah kesibukan pekerjaan dan tugas yg pa', '2019-05-23', '00:00:24'),
+(4, '4', 'edukasi kesehatan berolahraga untuk Lansia', 'cara berolahraga sesuai umur lansia yang dikemas secara menarik dan mudah dipahami', '2019-05-23', '24:00:00'),
+(5, '5', 'edukasi kesehatan berolahraga untuk Olahragawan', 'Cara membentuk badan dengan cara program GYM yang teratur ', '2019-05-16', '24:00:00'),
+(6, '1', '7 hari program diet', '7 hari program makan sehat dan aman untuk para pelaku program diet', '2019-05-23', '24:00:00'),
+(7, '2', 'edukasi kesehatan berolahraga untuk Olahragawan', 'tata cara angkat beban yang baik dan benar untuk terhindar dari kecelakaan berolahraga', '2019-05-23', '24:00:00'),
+(8, '3', 'edukasi untuk semua kalangan', 'konsultasi kesehatan untuk yang mengalami problematika dalam berolahraga ', '2019-05-23', '24:00:00'),
+(9, '4', 'edukasi untuk semua kalangan', 'cara mengetahui atau mengukur berat badan yang ideal ', '2019-05-23', '24:00:00'),
+(10, '5', 'edukasi kesehatan berolahraga untuk Lansia', 'cara melakukan senam lansia dengan baik', '2019-05-23', '24:00:00');
 
 -- --------------------------------------------------------
 
