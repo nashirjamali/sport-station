@@ -1,9 +1,3 @@
-<?php
-require_once '../../conn.php';
-
-$lapangans = mysqli_query($conn, "SELECT * FROM lapangan");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,8 +32,8 @@ $lapangans = mysqli_query($conn, "SELECT * FROM lapangan");
                             <ul class="nav navbar-nav">
                                 <li><a href="#header">Home</a></li>
                                 <li><a href="event.php">Event</a></li>
-                                <li class="active"><a href="lapangan.php">Lapangan</a></li>
-                                <li><a href="edukasi.php">Edukasi</a></li>
+                                <li><a href="lapangan.php">Lapangan</a></li>
+                                <li class="active"><a href="edukasi.php">Edukasi</a></li>
                                 <li><a href="register.php">Sign Up</a></li>
                             </ul>
                         </div>
@@ -62,26 +56,77 @@ $lapangans = mysqli_query($conn, "SELECT * FROM lapangan");
 
     <section id="cta-1">
         <div class="container">
-            <h2>Lapangan</h2>
-            <br><br>
             <div class="row">
-                <?php foreach ($lapangans as $key) : ?>
-                    <div class="col-md-3">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title"><?php echo $key['nama_lapangan'] ?></h5>
-                                <h6 class="card-subtitle mb-2 text-muted"><?php echo $key['lokasi'] ?></h6>
-                                <a href="<?= $key['link'] ?>" class="card-link" target="_blank">Link Lokasi</a>
-                            </div>
-                            <br><br>
+                <div class="col-md-4 wow fadeInLeft delay-05s">
+                    <div class="image">
+                        <img src="../assets/img/christine.jpg" style="">
+                    </div>
+                    <div class="col-md-12">
+                        <div class="description">
+                            <h3 class="head-title"><b>Olahraga Basket</b></h3>
+                            <hr class="botm-line">
+
+                            <p>Bermain olahraga bola basket dapan menyehatkan badan dan bisa menjaga berat badan yang ideal. </p>
+
                         </div>
                     </div>
-                <?php endforeach; ?>
+                </div>
+                <div class="col-md-4 wow fadeInLeft delay-05s">
+                    <div class="image">
+                        <img src="../assets/img/christine.jpg" style="">
+                    </div>
+                    <div class="col-md-12">
+                        <div class="description">
+                            <h3 class="head-title"><b>Resman-Smasaden</b></h3>
+                            <hr class="botm-line">
+
+                            <p>Honda DBL East Nusa Tenggara Series 2017. Sebelum menginjak opening party, para crew Honda DBL mampir ke SMAN 4 Kupang untuk melakukan roadshow. Seperti apa sih keseruannya?</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 wow fadeInLeft delay-05s">
+                    <div class="image">
+                        <img src="../assets/img/christine.jpg" style="">
+                    </div>
+                    <div class="col-md-12">
+                        <div class="description">
+                            <h3 class="head-title"><b>Resman-Smasaden</b></h3>
+                            <hr class="botm-line">
+
+                            <p>Honda DBL East Nusa Tenggara Series 2017. Sebelum menginjak opening party, para crew Honda DBL mampir ke SMAN 4 Kupang untuk melakukan roadshow. Seperti apa sih keseruannya?</p>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+
+    </section>
+    <!---->
     </section>
 
+    <section id="feature" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="image">
+                        <img src="../assets/img/cfd.jpg" style="">
+                    </div>
 
+                </div>
+                <div class="col-md-6">
+                    <div class="description">
+                        <h3 class="head-title"><b>Pemkot Surabaya Tambah Lokasi Car Free Day</b></h3>
+                        <hr class="botm-line">
+
+                        <p>Penambahan lokasi CFD yang dilakukan tiada lain adalah untuk mengajak masyarakat ikut serta dalam memberikan konstribusi bagi terciptanya kualitas udara di Kota Pahlawan yang bersih dan sehat. Tak hanya itu, lanjut Musdiq, kegiatan ini juga diharapkan mampu meyediakan tempat bagi masyarakat untuk bersosialiasi dan berolahraga.</p>
+
+                    </div>
+                </div>
+            </div>
+    </section>
     <!---->
     <!---->
     <footer class="" id="footer">
