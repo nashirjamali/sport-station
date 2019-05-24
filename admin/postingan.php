@@ -58,7 +58,7 @@ require_once '../conn.php';
                 Menu
             </div>
 
-            
+
             <!-- User Menu Item -->
             <li class="nav-item">
                 <a class="nav-link" href="user.php">
@@ -315,100 +315,47 @@ require_once '../conn.php';
                 <div class="container-fluid">
                     <h1>Page postingan</h1>
                     <a href="tambah-postingan.php" type="button" class="btn btn-primary mt-5 mb-3">tambah postingan</a>
+                    <?php
+
+                    $query = 'SELECT * FROM postingan';
+                    $postingans = mysqli_query($conn, $query);
+
+                    ?>
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">No</th>
                                 <th scope="col">judul </th>
                                 <th scope="col">isi</th>
                                 <th scope="col">Tanggal</th>
                                 <th scope="col">waktu</th>
+                                <th scope="col">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>80 Persen Serangan Jantung Bisa Dihindari dengan 5 Hal Sederhana Ini</td>
-                                <td> Serangan jantung adalah penyakit mematikan yang bisa terjadi secara mendadak.
-                                    Penyakit ini digolongkan sebagai pembunuh nomor satu di dunia oleh WHO.
-                                    Bahkan Organisasi Kesehatan Dunia (WHO) memperkirakan, bahwa setidaknya 17,5 juta orang meninggal karena penyakit kardiovaskular pada 2012. Tiga dari empat kematian terjadi di negara-negara berpenghasilan rendah serta mereka yang berpenghasilan menengah.
-                                    Tetapi kabar baiknya, sekitar 80 persen serangan jantung dan bahkan stroke sebenarnya dapat dicegah.
-                                    Berikut lima hal yang bisa diterapkan agar jantung tetap sehat dan jauh dari risiko terkena serangan jantung.
-                                    1. Makan makanan yang menyehatkan jantung
-                                    2. Aktif secara fisik
-                                    3. Memiliki lingkar pinggang yang sehat
-                                    4. Mengontrol tekanan darah tetap normal
-                                    5. Jangan merokok</td>
-                                <td> 23 May 2019</td>
-                                <td> 08.00 wib</td>
+                            <?php foreach ($postingans as $postingan) : ?>
+                                <tr>
+                                    <td><?php echo $postingan['judul']   ?></td>
+                                    <td><?php echo $postingan['isi']   ?></td>
+                                    <td><?php echo $postingan['tanggal']   ?></td>
+                                    <td><?php echo $postingan['waktu']   ?></td>
+                                    <td class="d-flex">
+                                        <!-- Edit -->
+                                        <form action="" method="get">
+                                            <input type="hidden" value="<?= $user['id'] ?>" name="id">
+                                            <button class="btn btn-secondary" type="submit"> Edit </button>
+                                        </form>
 
+                                        <!-- Hapus -->
+                                        <form action="delete-postingan.php" method="get" >
+                                            <input type="hidden" value="<?= $postingan['id'] ?>" name="id">
+                                            <button class="btn btn-danger"> Hapus </button>
+                                        </form>
 
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Idap Diabetes? Hindari Makanan dan Minuman Ini saat Puasa</td>
-                                <td>Menjalankan puasa di bulan Ramadan dianggap bisa memberi dampak positif
-                                    terhadap kesehatan. Tapi, bagi pengidap penyakit kronis seperti diabetes,
-                                    menjalani ibadah puasa tanpa konsultasi terlebih dahulu dengan dokter
-                                    bisa jadi malah membahayakan.
-                                    Pasalnya, ada beberapa hal yang harus diperhatikan oleh para pengidap diabetes.
-                                    Pengidap diabetes disarankan untuk mengonsumsi lebih banyak makanan yang memiliki
-                                    kandungan karbohidrat kompleks karena bisa menghasilkan energi secara perlahan.
-                                    Dan agar pengidap diabetes bisa berpuasa dengan aman, sebaiknya ketahui beberapa
-                                    makanan dan minuman yang harus dihindari oleh para pengidap diabetes saat menjalani
-                                    puasa di bulan Ramadan.
-                                    1.Nasi putih
-                                    2.Makanan yang mengandung lemak trans
-                                    3.Makanan yang berbahan tepung
-                                    4.Minuman bersoda</td>
-                                <td> 23 Mei 2019</td>
-                                <td>Sinta </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Lima Penyebab Mewabahnya Hipertensi pada Kaum Muda</td>
-                                <td>5 Faktor Penyebab Mewabahnya Hipertensi pada Kaum Muda – Sejatinya,
-                                    hipertensi atau tekanan darah tinggi adalah sejenis penyakit yang
-                                    lebih kerap menyerang orang lanjut usia dibandingkan kaum muda.
-                                    Pasalnya, resiko hipertensi memang akan meningkat seiring bertambahnya usia.
-                                    Namun sangat disayangkan, karena dewasa ini, kasus hipertensi juga banyak
-                                    ditemukan terjadi pada kaum muda. Bahkan di Amerika Serikat, ada kurang lebih 20%
-                                    kaum muda dengan rentan usia 18-30 tahun yang beresiko terkena jantung koroner
-                                    akibat penyakit hipertensi.
-                                    Sementara di Indonesia sendiri, data dari riset kesehatan pada tahun 2013 menunjukkan
-                                    bahwa dari 25.8% total kasus hipertensi yang ada, 5.3% diantaranya dimiliki oleh kaum
-                                    muda dengan rentan usia 15-17 tahun.
-                                    Lantas sebenarnya apa yang menyebabkan hipertensi pada kaum muda ?
-                                    Faktanya, hampir sekitar 90-95% kasus hipertensi di dunia dikategorikan sebagai jenis
-                                    hipertensi primer. Nah, hipertensi primer sendiri merupakan suatu kondisi yang belum
-                                    diketahui secara pasti apa penyebabnya.
-                                    Dan sisanya, dikategorikan sebagai jenis hipertensi sekunder. Inilah hipertensi yang
-                                    diakibatkan oleh beberapa kondisi medis tertentu termsuk jantung, sistem endokrin,
-                                    pembuluh darah serta gangguan fungsi ginjal.
-                                    Disisi lain, tuntunan hidup gaya di era modernisasi seperti sekarang ini, juga menjadi
-                                    salah satu faktor kenapa hipertensi bisa dimiliki oleh para kaum muda.
-                                    Untuk memahami lebih memahaminya, yuk kita langsung simak penjelasan berikut ini :
-                                    1. Faktor Genetik
-                                    Kenapa kaum muda bisa terkena hipertensi ? Salah satu penyebab paling mendasar ialah
-                                    adanya riwayat penyakit hipertensi dalam silsilah keluarga.
-                                    2. Pola Makan yang Buruk
-                                    Kebiasaan yang sangat lekat dengan kaum muda ialah sesuatu yang serba cepat dan praktis,
-                                    termasuk dalam hal makanan. Alhasil ? Makberkontribusi dalam menyumbang resiko penyakit hipertensi.
-                                    3. Kurang Berolahraga
-                                    Faktanya, aktivitas fisik termasuk olahraga dapat memantu meningkatkan produksi hormon yang bekerja
-                                    untuk melemaskan dinding pembuluh darah. Alhasi ? Tekanan darah akan lebih terkontrol dan stabil.
-                                    4. Obesitas
-                                    Dewasa ini, banyak sekali kaum muda yang memiliki berat badan berlebih. Semenatara WHO mencatat bahwa
-                                    ternyata kasus obesitas telah meningkat hingga 2x lipat sejak tahun 2008.
-                                    5. Mengabaikan Cek Tensi
-                                    Padahal idealnya, kaum muda sudah harus mulai rutin mengecek tensi mereka dari mulai usia 20 tahun.
-                                    Dengan demikian, maka resiko komplikasi dimasa mendatang bisa segera dihentikan perkembangannya sedini mungkin.
-                                </td>
-                                <td>22 mei 2019</td>
-                                <td>admin</td>
-                            </tr>
-
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
+
                     </table>
 
                 </div>

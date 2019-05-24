@@ -1,6 +1,24 @@
 <?php
 require_once '../conn.php';
 ?>
+<!-- Backend Insert Data -->
+<?php
+
+if (isset($_POST['btn-simpan'])) {
+    $judul = htmlspecialchars($_POST['judul']);
+    $isi = htmlspecialchars($_POST['isi']);
+    $tanggal = htmlspecialchars($_POST['tanggal']);
+    $waktu = htmlspecialchars($_POST['waktu']);
+    $create = mysqli_query($conn, "INSERT INTO `postingan`(`penulis_id`, `judul`, `isi`, `tanggal`, `waktu`) VALUE ('11', '$judul', '$isi', '$tanggal', '$waktu')");
+    
+    if ($create) {
+        header( "Location: postingan.php" );
+    } else {
+        echo mysqli_error($conn);
+    }
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -314,44 +332,44 @@ require_once '../conn.php';
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h2>Tambah Penyewaan</h2>
+                    <h2>Tambah Postingan</h2>
 
                     <div class="row">
                         <div class="card col-md-12 col-lg-6">
                             <div class="card-body">
 
                                 <!-- Form -->
-                                <form action="">
+                                <form action="" method="post">
 
                                     <!-- Input nama -->
                                     <div class="form-group">
                                         <label for="judul">judul</label>
-                                        <input type="text" class="form-control" id="judul" placeholder="judul...">
+                                        <input name="judul" type="text" class="form-control" id="judul" placeholder="judul...">
                                     </div>
 
                                     <!-- Input isi -->
                                     <div class="form-group">
                                         <label for="isi">isi</label>
-                                        <input type="text" class="form-control" id="isi" placeholder="isi...">
+                                        <input name="isi" type="text" class="form-control" id="isi" placeholder="isi...">
                                     </div>
 
                                     <!-- Input tanggal -->
                                     <div class="form-group">
                                         <label for="tanggal">tanggal</label>
-                                        <input type="date" class="form-control" id="tanggal" placeholder="tanggal...">
+                                        <input name="tanggal" type="date" class="form-control" id="tanggal" placeholder="tanggal...">
                                     </div>
 
                                     <!-- Input waktu -->
                                     <div class="form-group">
                                         <label for="waktu">waktu</label>
-                                        <input type="text" class="form-control" id="waktu" placeholder="tanggal...">
+                                        <input name="waktu" type="text" class="form-control" id="waktu" placeholder="tanggal...">
                                     </div>
 
                                     <!-- Button Simpan -->
-                                    <a href="postingan.php" type="submit" class="btn btn-primary">Simpan</a>
+                                    <button name="btn-simpan" type="submit" class="btn btn-primary">Simpan</button>
 
                                     <!-- Button Batal -->
-                                    <a href="postingan.php" type="button" class="btn btn-secondary">Batal</a>
+                                    <button type="button" class="btn btn-secondary">Batal</button>
 
                                 </form>
 
