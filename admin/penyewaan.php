@@ -351,7 +351,7 @@ require_once '../conn.php';
                                         </form>
 
                                         <!-- Hapus -->
-                                        <form action="delete-postingan.php" method="get" >
+                                        <form action="delete-penyewaan.php" method="get" >
                                             <input type="hidden" value="<?= $penyewaan['id'] ?>" name="id">
                                             <button class="btn btn-danger"> Hapus </button>
                                         </form>

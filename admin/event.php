@@ -315,7 +315,12 @@ require_once '../conn.php';
                 <div class="container-fluid">
                     <h1>Page event</h1>
                     <a href="tambah-event.php" type="button" class="btn btn-primary mt-5 mb-3">tambah event baru</a>
+                    <?php
 
+                    $query = 'SELECT * FROM kategori_event';
+                    $kategori_evens = mysqli_query($conn, $query);
+
+                    ?>
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
@@ -329,36 +334,33 @@ require_once '../conn.php';
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Jalan sehat</td>
-                                <td>Lapangan mas</td>
-                                <td>17 Agustus 2019</td>
-                                <td>Hari pahlawan</td>
-                                <td>Heryy</td>
-                                <td> <img src="../img_lapangan/thor.jpg" width='150' weigth='150'> </td>
+                        <?php foreach ($kategori_events as $kategori_event : ?>
+                                <tr>
+                                    <td><?php echo $kategori_event['nama_kegiatan']   ?></td>
+                                    <td><?php echo $kategori_event['tempat_dan_waktu']   ?></td>
+                                    <td><?php echo $kategori_event['tanggal']   ?></td>
+                                    <td><?php echo $kategori_event['deskripsi']   ?></td>
+                                    <td><?php echo $kategori_event['gambar']   ?></td>
+                                    <td><?php echo $kategori_event['pembuat']   ?></td>
+                                    <td><?php echo $kategori_event['kategori_id']   ?></td>
+                                    <td class="d-flex">
+                                        <!-- Edit -->
+                                        <form action="" method="get">
+                                            <input type="hidden" value="<?= $user['id'] ?>" name="id">
+                                            <button class="btn btn-secondary" type="submit"> Edit </button>
+                                        </form>
 
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>senam pagi</td>
-                                <td>Lapangan cony</td>
-                                <td>25 january 2018</td>
-                                <td>senam pagi sehat selalu</td>
-                                <td>Dion</td>
-                                <td> <img src="../img_lapangan/conny.jpg" width='150' weigth='150'> </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Badminton Junior Championship 2018</td>
-                                <td>Jaya Raya Sports Hall Training Center</td>
-                                <td>22 July 2018</td>
-                                <td>The 2018 Badminton Asia Junior Championships is the 21st edition of the Asia </td>
-                                <td>Hakim</td>
-                                <td> <img src="../img_lapangan/conny.jpg" width='150' weigth='150'> </td>
+                                        <!-- Hapus -->
+                                        <form action="delete-event.php" method="get" >
+                                            <input type="hidden" value="<?= $kategori_event['id'] ?>" name="id">
+                                            <button class="btn btn-danger"> Hapus </button>
+                                        </form>
 
-                            </tr>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
 
+                        </tbody>
                         </tbody>
                     </table>
                 </div>

@@ -315,55 +315,49 @@ require_once '../conn.php';
                 <div class="container-fluid">
                     <h1>Page penjualan</h1>
                     <a href="tambah-penjualan.php" type="button" class="btn btn-primary mt-5 mb-3">tambah penjualan</a>
+                    <?php
 
+                    $query = 'SELECT * FROM penjualan';
+                    $penjualans = mysqli_query($conn, $query);
+
+                    ?>
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">No</th>
                                 <th scope="col">Nama </th>
                                 <th scope="col">Deksripsi barang</th>
                                 <th scope="col">Lokasi</th>
-                                <th scope="col">unit</th>
+                                <th scope="col">qty</th>
                                 <th scope="col">Harga</th>
                                 <th scope="col">Nama penjual</th>
+                                <th scope="col">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>BRUCE LEE FITNESS Dragon Utility Bench Peralatan Olahraga - Hitam</td>
-                                <td>BRUCE LEE FITNESS Dragon Utility Bench Peralatan Olahraga - Hitam,
-                                    peralatan olahraga yang dapat melatih otot dada, bahu, punggung.</td>
-                                <td>Gubeng utara</td>
-                                <td>15 unit tersisa</td>
-                                <td>Rp 650.000</td>
-                                <td>Rafi Setiawan</td>
+                        <?php foreach ($penjualans as $penjualan) : ?>
+                                <tr>
+                                    <td><?php echo $penjualan['nama']   ?></td>
+                                    <td><?php echo $penjualan['deskripsi']   ?></td>
+                                    <td><?php echo $penjualan['lokasi']   ?></td>
+                                    <td><?php echo $penjualan['qty']   ?></td>
+                                    <td><?php echo $penjualan['harga']   ?></td>
+                                    <td><?php echo $penjualan['nama_penjual']   ?></td>
+                                    <td class="d-flex">
+                                        <!-- Edit -->
+                                        <form action="" method="get">
+                                            <input type="hidden" value="<?= $user['id'] ?>" name="id">
+                                            <button class="btn btn-secondary" type="submit"> Edit </button>
+                                        </form>
 
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Iron Gym Alat Olahraga Pria Alat Fitness</td>
-                                <td>Iron Gym Alat Olahraga Pria Alat Fitness
-                                    merupakan alat fitness yang bisa digunakan
-                                    untuk chin up, sit up, push up, dips up.
-                                    Alat yang revosioner, kecil, dan mudah dipakai.</td>
-                                <td>Gubeng utara</td>
-                                <td>15 unit tersisa</td>
-                                <td>Rp 650.000</td>
-                                <td>Rafi Setiawan</td>
+                                        <!-- Hapus -->
+                                        <form action="delete-penjualan.php" method="get" >
+                                            <input type="hidden" value="<?= $penjualan['id'] ?>" name="id">
+                                            <button class="btn btn-danger"> Hapus </button>
+                                        </form>
 
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Treadmill 630 Multifunction</td>
-                                <td>OneSports Manual Treadmill 630 Multifungsi yang praktis dan hemat
-                                    tempat yang dianjurkan untuk kesehatan jantung, pembakaran lemak.</td>
-                                <td>Gubeng Selatan</td>
-                                <td>10 unit tersisa</td>
-                                <td>Rp 4.970.000</td>
-                                <td>Andy syafii</td>
-
-                            </tr>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
 
                         </tbody>
                     </table>
