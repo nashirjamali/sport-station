@@ -2,6 +2,27 @@
 require_once '../conn.php';
 ?>
 
+<?php
+
+if (isset($_POST['btn-simpan'])) {
+    $idUser = mysqli_query($conn, "SELECT id FROM lapangan WHERE nama_lapangan = " . $nama_lapangan);
+
+    $kategori_id = $_POST['kategori_id'];
+    $nama_lapangan = $_POST['nama_lapangan'];
+    $lokasi = $_POST['lokasi'];
+    $link = $_POST['link'];
+
+    $create = mysqli_query($conn, "INSERT INTO `lapangan`(`kategori_id`, `nama_lapangan`, `lokasi`, `link`) VALUE ('$kategori_id', '$nama_lapangan', '$lokasi', '$link')");
+
+    if ($create) {
+        header("Location: lapangan.php");
+    } else {
+        echo mysqli_error($conn);
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -324,17 +345,21 @@ require_once '../conn.php';
 
                                     <!-- pilih kategori lapangan -->
                                     <div class="form-group">
-                                        <label for="pilih">Pilih</label>
-                                        <select class="form-control" id="pilih">
-                                            <option value="lomba">Lomba</option>
-                                            <option value="kegiatan">kegiatan</option>
+                                        <label for="pilih">Pilih Kateogri Lapangan</label>
+                                        <select class="form-control" id="kategori_id">
+                                            <option value="1">Lapangan Futsal</option>
+                                            <option value="2">Lapangan Badminton</option>
+                                            <option value="3">Lapangan Lari</option>
+                                            <option value="4">Lapangan Tennis</option>
+                                            <option value="5">Kolam Renang</option>
+                                            <option value="6">Tempat Gym</option>>
                                         </select>
                                     </div>
 
                                     <!-- Input lapangan -->
                                     <div class="form-group">
                                         <label for="nama-lapangan">Nama lapangan</label>
-                                        <input type="text" class="form-control" id="nama-lapangan" placeholder="Masukan nama lapangan...">
+                                        <input type="text" class="form-control" id="nama_lapangan" placeholder="Masukan nama lapangan...">
                                     </div>
 
                                     <!-- Input lokasi -->
@@ -350,7 +375,7 @@ require_once '../conn.php';
                                     </div>
 
                                     <!-- Button Simpan -->
-                                    <a href="lapangan.php" type="submit" class="btn btn-primary">Simpan</a>
+                                    <button name="btn-simpan" type="submit" class="btn btn-primary">Simpan</button>
 
                                     <!-- Button Batal -->
                                     <a href="lapangan.php" type="button" class="btn btn-secondary">Batal</a>
