@@ -1,5 +1,12 @@
 <?php
 require_once '../conn.php';
+require 'upload.php';
+
+$gambar = upload();
+
+if (!$gambar) {
+    return false;
+}
 
 $kategoris = mysqli_query($conn, "SELECT * FROM kategori_event");
 
@@ -9,20 +16,18 @@ $kategoris = mysqli_query($conn, "SELECT * FROM kategori_event");
 <?php
 
 if (isset($_POST['btn-simpan'])) {
-    $idUser = mysqli_query($conn, "SELECT id FROM users WHERE username = " . $username);
 
     $namaKegiatan = $_POST['nama-event'];
     $tempatEvent = $_POST['tempat-event'];
     $tanggalEvent = $_POST['tanggal-event'];
     $deskripsiEvent = $_POST['desc-event'];
     $gambar = $_POST['gambar-event'];
-    $pembuatEvent = $idUser;
     $kategoriEvent = $_POST['kategori-event'];
 
-    $create = mysqli_query($conn, "INSERT INTO `event`(`nama_kegiatan`, `tempat_dan_waktu`, `tanggal`, `deskripsi`, `gambar`, `pembuat`, `kategori_id`) VALUE ('$namaKegiatan', '$tanggalEvent', '$deskripsiEvent', '$gambar', '$pembuatEvent', '$kategoriEvent')");
+    $create = mysqli_query($conn, "INSERT INTO `event`(`nama_kegiatan`, `tempat_dan_waktu`, `tanggal`, `deskripsi`, `gambar`, `pembuat`, `kategori_id`) VALUE ('$namaKegiatan', '$tanggalEvent', '$deskripsiEvent', '$gambar', '1', '$kategoriEvent')");
 
     if ($create) {
-        header("Location: user.php");
+        header("Location: event.php");
     } else {
         echo mysqli_error($conn);
     }
@@ -30,23 +35,6 @@ if (isset($_POST['btn-simpan'])) {
 
 ?>
 
-<!-- Backend Insert Data -->
-<?php
-
-if (isset($_POST['btn-simpan'])) {
-    $username = htmlspecialchars($_POST['username']);
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-    $role = $_POST['role'];
-    $create = mysqli_query($conn, "INSERT INTO `users`(`username`, `password`, `role`) VALUE ('$username', '$password', '$role')");
-    
-    if ($create) {
-        header( "Location: user.php" );
-    } else {
-        echo mysqli_error($conn);
-    }
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -366,7 +354,7 @@ if (isset($_POST['btn-simpan'])) {
                             <div class="card-body">
 
                                 <!-- Form -->
-                                <form action="" method="post">
+                                <form action="" method="post" enctype="multipart/form-data">
 
                                     <!-- Input pembuat event -->
                                     <div class="form-group">
