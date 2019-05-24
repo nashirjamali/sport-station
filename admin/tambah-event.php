@@ -2,6 +2,24 @@
 require_once '../conn.php';
 ?>
 
+<!-- Backend Insert Data -->
+<?php
+
+if (isset($_POST['btn-simpan'])) {
+    $username = htmlspecialchars($_POST['username']);
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $role = $_POST['role'];
+    $create = mysqli_query($conn, "INSERT INTO `users`(`username`, `password`, `role`) VALUE ('$username', '$password', '$role')");
+    
+    if ($create) {
+        header( "Location: user.php" );
+    } else {
+        echo mysqli_error($conn);
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
