@@ -460,4 +460,25 @@ a, a:hover {
   }
 }
 
+.image{
+
+  width: 100%;
+  height: auto;
+}
+
+.image img {
+  width : 100%;
+  height: auto;
+}
+
+.description{
+
+  width: 100%;
+  height: auto;
+}
+
+.description p {
+  font-size: 15px;
+  text-align: justify;
+}
 /****/
