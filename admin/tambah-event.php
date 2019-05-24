@@ -1,5 +1,33 @@
 <?php
 require_once '../conn.php';
+
+$kategoris = mysqli_query($conn, "SELECT * FROM kategori_event");
+
+?>
+
+<!-- Backend Insert Data -->
+<?php
+
+if (isset($_POST['btn-simpan'])) {
+    $idUser = mysqli_query($conn, "SELECT id FROM users WHERE username = " . $username);
+
+    $namaKegiatan = $_POST['nama-event'];
+    $tempatEvent = $_POST['tempat-event'];
+    $tanggalEvent = $_POST['tanggal-event'];
+    $deskripsiEvent = $_POST['desc-event'];
+    $gambar = $_POST['gambar-event'];
+    $pembuatEvent = $idUser;
+    $kategoriEvent = $_POST['kategori-event'];
+
+    $create = mysqli_query($conn, "INSERT INTO `event`(`nama_kegiatan`, `tempat_dan_waktu`, `tanggal`, `deskripsi`, `gambar`, `pembuat`, `kategori_id`) VALUE ('$namaKegiatan', '$tanggalEvent', '$deskripsiEvent', '$gambar', '$pembuatEvent', '$kategoriEvent')");
+
+    if ($create) {
+        header("Location: user.php");
+    } else {
+        echo mysqli_error($conn);
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +86,7 @@ require_once '../conn.php';
                 Menu
             </div>
 
-        
+
             <!-- User Menu Item -->
             <li class="nav-item">
                 <a class="nav-link" href="user.php">
@@ -324,42 +352,58 @@ require_once '../conn.php';
 
                                     <!-- Input pembuat event -->
                                     <div class="form-group">
-                                        <label for="username">username</label>
-                                        <input type="text" class="form-control" id="username" placeholder="Masukan username...">
+                                        <label for="username">Username</label>
+                                        <input name="username" type="text" class="form-control" id="username" placeholder="Masukan username...">
                                     </div>
 
                                     <!-- Input event -->
                                     <div class="form-group">
                                         <label for="nama-evemt">Nama event</label>
-                                        <input type="text" class="form-control" id="nama-evemt" placeholder="Masukan nama lapangan...">
+                                        <input name="nama-event" type="text" class="form-control" id="nama-evemt" placeholder="Masukan nama event...">
                                     </div>
 
                                     <!-- Input tempat -->
                                     <div class="form-group">
                                         <label for="tempat-evemt">Tempat event</label>
-                                        <input type="text" class="form-control" id="tempat-evemt" placeholder="Masukan tempat...">
+                                        <input name="tempat-event" type="text" class="form-control" id="tempat-evemt" placeholder="Masukan tempat...">
                                     </div>
 
                                     <!-- Input tanggal -->
                                     <div class="form-group">
                                         <label for="tanggal">tanggal event</label>
-                                        <input type="date" class="form-control" id="tanggal" placeholder="Masukan tanggal event...">
+                                        <input name="tanggal-event" type="date" class="form-control" id="tanggal" placeholder="Masukan tanggal event...">
                                     </div>
 
                                     <!-- Input desc event -->
                                     <div class="form-group">
-                                        <label for="desc-lapangan">deskripsi Lapangan</label>
-                                        <input type="text" class="form-control" id="desc-lapangan" placeholder="isi deskripsi lapangan...">
+                                        <label for="desc-lapangan">Deskripsi Event</label>
+                                        <textarea name="desc-event" class="form-control" id="desc-lapangan" placeholder="isi deskripsi lapangan..."></textarea>
                                     </div>
 
                                     <!-- Input gambar -->
                                     <div class="form-group">
-                                        <label for="exampleFormControlFile1">gambar</label>
-                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                        <label for="exampleFormControlFile1">Poster Event</label>
+                                        <input name="gambar-event" type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    </div>
+
+                                    <!-- Input Pembuat -->
+                                    <div class="form-group">
+                                        <label for="pembuat-evemt">Pembuat event</label>
+                                        <input name="pembuat-event" type="text" class="form-control" id="pembuat-evemt" placeholder="Masukan pembuat...">
+                                    </div>
+
+                                    <!-- Kategori Event -->
+                                    <div class="form-group">
+                                        <label for="kategori-event">Example select</label>
+                                        <select name="kategori-event" class="form-control" id="kategori-event">
+                                            <?php foreach ($kategoris as $kategori) : ?>
+                                            <option value="<?= $kategori['id'] ?>"><?php echo $kategori['nama'] ?></option>
+                                            <?php endforeach; ?>
+                                        </select>
                                     </div>
 
                                     <!-- Button Simpan -->
-                                    <a href="event.php" type="submit" class="btn btn-primary">Simpan</a>
+                                    <button name="btn-simpan" type="submit" class="btn btn-primary">Simpan</button>
 
                                     <!-- Button Batal -->
                                     <a href="event.php" type="button" class="btn btn-secondary">Batal</a>
