@@ -57,7 +57,7 @@
                     <div class="form-group">
                       <input type="text" class="form-control form-control-user" id="address" placeholder="Address">
                     </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block">
+                    <a href="login.php" class="btn btn-primary btn-user btn-block">
                       Register
                     </a>
                     <hr>
