@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sport Station</title>
+  <title>Sport Station - Home Page</title>
   <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
   <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
@@ -67,7 +67,6 @@
   <section id="feature" class="section-padding">
     <div class="container">
       <div class="row">
-      <a href="">
         <div class="col-md-3 wow fadeInLeft delay-05s">
           <div class="section-title">
             <h2 class="head-title">Fitur</h2>
@@ -75,9 +74,8 @@
             <p class="sec-para">Temukan kemudahan hidup sehat dengan berolahraga setiap hari, coba fitur di website kami. Jangan sampai kesibukanmu mengganggu kesehatanmu. </p>
           </div>
         </div>
-        </a>
         <div class="col-md-9">
-        <a href="#" class="text-decoration-none">
+        <a href="event.php" class="text-decoration-none">
           <div class="col-md-6 wow fadeInRight delay-02s">
             <div class="icon head-title">
               <i class="fa fa-bullhorn"></i>
@@ -116,7 +114,7 @@
               <i class="fa fa-lightbulb-o"></i>
             </div>
             <div class="icon-text">
-              <h3 class="head-title">Program Diet</h3>
+              <h3 class="head-title">Tata Cara Diet</h3>
               <p class="txt-para">Cara menurunkan berat badan tanpa bahaya kesehatan. </p>
             </div>
           </div>
