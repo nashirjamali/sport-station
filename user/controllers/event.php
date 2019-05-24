@@ -24,17 +24,16 @@
           <div class="col-md-12">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="fa fa-bars"></span>
-                        </button>
+                <span class="fa fa-bars"></span>
+              </button>
               <a href="index.html" class="navbar-brand">Sport Station</a>
             </div>
             <div class="collapse navbar-collapse navbar-right" id="mynavbar">
               <ul class="nav navbar-nav">
-                <li><a href="#header">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li class="active"><a href="event.php">Event</a></li>
                 <li><a href="lapangan.php">Lapangan</a></li>
-                <li><a href="">Edukasi</a></li>
-                <li><a href="#contact">Program Diet</a></li>
+                <li><a href="edukasi.php">Edukasi</a></li>
                 <li><a href="register.php">Sign Up</a></li>
               </ul>
             </div>
@@ -54,67 +53,101 @@
   </header>
   <!--/ header-->
   <!---->
-  
+
   <section id="cta-1">
     <div class="container">
-        <div class="row">
+      <div class="row">
         <div class="col-md-4 wow fadeInLeft delay-05s">
-            <div class="image">
-            <img src="../assets/img/christine.jpg" style="">
-            </div>
-            <div class="col-md-12">
-                <div class="description">
-                <h3 class="head-title"><b>Resman-Smasaden</b></h3>
-                <hr class="botm-line">
+          <div class="image">
+            <img src="../assets/img/wp.jpeg" style="">
+          </div>
+          <div class="col-md-12">
+            <div class="description">
+              <h3 class="head-title"><b>UWP Cup</b></h3>
+              <hr class="botm-line">
 
-                <p>Honda DBL East Nusa Tenggara Series 2017. Sebelum menginjak opening party, para crew Honda DBL mampir ke SMAN 4 Kupang untuk melakukan roadshow. Seperti apa sih keseruannya?</p>
+              <p>Tanggal : 27 – 28 April 2019 Tempat : Lapangan Futsal Universitas Wijaya Putra Jl. Raya Benowo 1-3 Surabaya Tema : “Practice With A Purpose, Play With A Passion”</p>
 
-                </div>
             </div>
-            <div class="container">
-        <div class="row">
-        <div class="col-md-4">
-            <div class="image">
-            <img src="../assets/img/christine.jpg" style="">
-            </div>
-            <div class="col-md-12">
-                <div class="description">
-                <h3 class="head-title"><b>Resman-Smasaden</b></h3>
-                <hr class="botm-line">
-
-                <p>Honda DBL East Nusa Tenggara Series 2017. Sebelum menginjak opening party, para crew Honda DBL mampir ke SMAN 4 Kupang untuk melakukan roadshow. Seperti apa sih keseruannya?</p>
-
-                </div>
-            </div>
-            </div>
+          </div>
         </div>
+        <div class="col-md-4 wow fadeInLeft delay-05s">
+          <div class="image">
+            <img src="../assets/img/jap.jpg" style="">
+          </div>
+          <div class="col-md-12">
+            <div class="description">
+              <h3 class="head-title"><b>Jap Futsal Cup Session II</b></h3>
+              <hr class="botm-line">
+
+              <p>Sebuah kompetisi futsal tingkat SMA/SMK/MA sederajat yang diadakan oleh Himpunan Mahasiswa Jurusan Administrasi Publik Universitas Negeri Surabaya.
+
+                Sebuah lomba yang diadakan untuk mengasah kemampuan olahraga di bidang futsal khususnya bagi para siswa tingkat SMA/SMK/MA- sederajat Se-Provinsi Jawa Timur.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 wow fadeInLeft delay-05s">
+          <div class="image">
+            <img src="../assets/img/uns.jpg" style="">
+          </div>
+          <div class="col-md-12">
+            <div class="description">
+              <h3 class="head-title"><b>HMJ Hukum Unesa : Law Futsal Competition 2.0</b></h3>
+              <hr class="botm-line">
+
+              <p>Your wait is over !! “Kompetisi Futsal Antar SMA/SMK/MA sederajat se-Jawa Timur”. We’re back with new format competition. “Round Robin (Group System)” setiap peserta akan dibagi kedalam beberapa grup kemudian peserta terbaik dari setiap grup akan melanjutkan ke babak sistem gugur. What are you waiting for? Segera daftarkan sekolahmu.
+
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    
+
   </section>
   <!---->
   </section>
-        
+
   <section id="feature" class="section-padding">
-  <div class="container">
-        <div class="row">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="image">
+            <img src="../assets/img/bsk.jpg" style="">
+          </div>
+
+        </div>
         <div class="col-md-6">
-            <div class="image">
-            <img src="../assets/img/cfd.jpg" style="">
-            </div>
+          <div class="description">
+            <h3 class="head-title"><b>3X3 Basketball Unesa Cup 2018</b></h3>
+            <hr class="botm-line">
+
+            <p>HALOOO BASKETBALLERS !! Kali ini UKM BOLA BASKET UNESA, mengadakan 3X3 UNESA CUP 2K18. Pertandingan antara umur 18 tahun se-jatim putra dan putri, yang akan diselenggarakan tanggal 14 September 2018. Daftarkan tim kalian sekarang juga, Jangan lupa yah untuk umum loh ini, yuk buruan daftar kuota terbatas. SALAM OLAHRAGAA!! JAYAA!!</p>
+
+          </div>
+        </div>
+        
+        <div class="col-md-3">
+          <div class="image">
+            <img src="../assets/img/bsk.jpg" style="">
+          </div>
 
         </div>
-            <div class="col-md-6">
-                <div class="description">
-                <h3 class="head-title"><b>Pemkot Surabaya Tambah Lokasi Car Free Day</b></h3>
-                <hr class="botm-line">
+        <div class="col-md-6">
+          <div class="description">
+            <h3 class="head-title"><b>3X3 Basketball Unesa Cup 2018</b></h3>
+            <hr class="botm-line">
 
-                <p>Penambahan lokasi CFD yang dilakukan tiada lain adalah untuk mengajak masyarakat ikut serta dalam memberikan konstribusi bagi terciptanya kualitas udara di Kota Pahlawan yang bersih dan sehat. Tak hanya itu, lanjut Musdiq, kegiatan ini juga diharapkan mampu meyediakan tempat bagi masyarakat untuk bersosialiasi dan berolahraga.</p>
+            <p>HALOOO BASKETBALLERS !! Kali ini UKM BOLA BASKET UNESA, mengadakan 3X3 UNESA CUP 2K18. Pertandingan antara umur 18 tahun se-jatim putra dan putri, yang akan diselenggarakan tanggal 14 September 2018. Daftarkan tim kalian sekarang juga, Jangan lupa yah untuk umum loh ini, yuk buruan daftar kuota terbatas. SALAM OLAHRAGAA!! JAYAA!!</p>
 
-                </div>
-            </div>
+          </div>
         </div>
-        </section>
+      </div>
+    </div>
+  </section>
   <!---->
   <!---->
   <footer class="" id="footer">
@@ -154,4 +187,5 @@
   <script src="../assets/contactform/contactform.js"></script>
 
 </body>
+
 </html>
