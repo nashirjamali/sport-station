@@ -58,6 +58,7 @@ require_once '../conn.php';
                 Menu
             </div>
 
+        
             <!-- User Menu Item -->
             <li class="nav-item">
                 <a class="nav-link" href="user.php">
@@ -321,6 +322,12 @@ require_once '../conn.php';
                                 <!-- Form -->
                                 <form action="">
 
+                                    <!-- Input pembuat event -->
+                                    <div class="form-group">
+                                        <label for="username">username</label>
+                                        <input type="text" class="form-control" id="username" placeholder="Masukan username...">
+                                    </div>
+
                                     <!-- Input event -->
                                     <div class="form-group">
                                         <label for="nama-evemt">Nama event</label>
@@ -347,14 +354,8 @@ require_once '../conn.php';
 
                                     <!-- Input gambar -->
                                     <div class="form-group">
-                                        <label for="exampleFormControlFile1">gambar lapangan</label>
+                                        <label for="exampleFormControlFile1">gambar</label>
                                         <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                    </div>
-
-                                    <!-- Input pembuat event -->
-                                    <div class="form-group">
-                                        <label for="username">username</label>
-                                        <input type="text" class="form-control" id="username" placeholder="Masukan username...">
                                     </div>
 
                                     <!-- Button Simpan -->

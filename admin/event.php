@@ -58,6 +58,7 @@ require_once '../conn.php';
                 Menu
             </div>
 
+
             <!-- User Menu Item -->
             <li class="nav-item">
                 <a class="nav-link" href="user.php">
@@ -313,7 +314,53 @@ require_once '../conn.php';
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <h1>Page event</h1>
-                    <a href="tambah-event.php" type="button" class="btn btn-primary">tambah event baru</a>
+                    <a href="tambah-event.php" type="button" class="btn btn-primary mt-5 mb-3">tambah event baru</a>
+
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Nama Event</th>
+                                <th scope="col">Tempat</th>
+                                <th scope="col">Tangal Event</th>
+                                <th scope="col">Deskripsi</th>
+                                <th scope="col">Nama penyelenggara</th>
+                                <th scope="col">Gambar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Jalan sehat</td>
+                                <td>Lapangan mas</td>
+                                <td>17 Agustus 2019</td>
+                                <td>Hari pahlawan</td>
+                                <td>Heryy</td>
+                                <td> <img src="../img_lapangan/thor.jpg" width='150' weigth='150'> </td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>senam pagi</td>
+                                <td>Lapangan cony</td>
+                                <td>25 january 2018</td>
+                                <td>senam pagi sehat selalu</td>
+                                <td>Dion</td>
+                                <td> <img src="../img_lapangan/conny.jpg" width='150' weigth='150'> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Badminton Junior Championship 2018</td>
+                                <td>Jaya Raya Sports Hall Training Center</td>
+                                <td>22 July 2018</td>
+                                <td>The 2018 Badminton Asia Junior Championships is the 21st edition of the Asia </td>
+                                <td>Hakim</td>
+                                <td> <img src="../img_lapangan/conny.jpg" width='150' weigth='150'> </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
                 </div>
                 <!-- /.container-fluid -->
 

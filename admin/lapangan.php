@@ -58,6 +58,8 @@ require_once '../conn.php';
                 Menu
             </div>
 
+            
+
             <!-- User Menu Item -->
             <li class="nav-item">
                 <a class="nav-link" href="user.php">
@@ -313,8 +315,40 @@ require_once '../conn.php';
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <h1>Page lapangan</h1>
-                    <a href="tambah-lapangan.php" type="button" class="btn btn-primary">tambah lapangan </a>
+                    <a href="tambah-lapangan.php" type="button" class="btn btn-primary mt-5 mb-3">tambah lapangan </a>
 
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Nama Lapangan</th>
+                                <th scope="col">Lokasi</th>
+                                <th scope="col">Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Lapangan mas</td>
+                                <td>Jl.Pakis Wetan</td>
+                                <td>https://www.google.com/maps?q=lapangan+thor&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjZyMrnm7PiAhWUheYKHb0QBrcQ_AUIDygC</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Lapangan cony</td>
+                                <td>Jl. Gubeng</td>
+                                <td>https://www.google.com/maps?q=lapangan+thor&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjZyMrnm7PiAhWUheYKHb0QBrcQ_AUIDygC</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Jaya Raya Sports Hall Training Center</td>
+                                <td>jakarta</td>
+                                <td>https://www.google.com/maps?q=lapangan+thor&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjZyMrnm7PiAhWUheYKHb0QBrcQ_AUIDygC</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
                 </div>
                 <!-- /.container-fluid -->
 
