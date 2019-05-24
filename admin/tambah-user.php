@@ -2,6 +2,24 @@
 require_once '../conn.php';
 ?>
 
+<!-- Backend Insert Data -->
+<?php
+
+if (isset($_POST['btn-simpan'])) {
+    $username = htmlspecialchars($_POST['username']);
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $role = $_POST['role'];
+    $create = mysqli_query($conn, "INSERT INTO `users`(`username`, `password`, `role`) VALUE ('$username', '$password', '$role')");
+    
+    if ($create) {
+        header( "Location: user.php" );
+    } else {
+        echo mysqli_error($conn);
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -322,38 +340,31 @@ require_once '../conn.php';
                             <div class="card-body">
 
                                 <!-- Form -->
-                                <form action="" class="was-validated">
+                                <form method="POST">
 
                                     <!-- Input Username -->
                                     <div class="form-group">
-                                        <label for="validationTooltip01">Username</label>
-                                        <input type="text" class="form-control" id="validationTooltip01" placeholder="Masukan Username..." required>
-                                        <div class="invalid-feedback">
-                                            Please enter Username
-                                        </div>
+                                        <label for="username">Username</label>
+                                        <input name="username" type="text" class="form-control" id="username" placeholder="Masukan Username...">
                                     </div>
 
                                     <!-- Input Password -->
                                     <div class="form-group">
-                                        <label for="validationTooltip01">Password</label>
-                                        <input type="password" class="form-control" id="validationTooltip01" placeholder="Masukan Password..." required>
-                                        <div class="invalid-feedback">
-                                            Please enter password
-                                        </div>
-
+                                        <label for="password">Password</label>
+                                        <input name="password" type="password" class="form-control" id="password" placeholder="Masukan Password...">
                                     </div>
 
                                     <!-- Select Role -->
                                     <div class="form-group">
                                         <label for="role">Role</label>
-                                        <select class="form-control" id="role" disabled>
+                                        <select name="role" class="form-control" id="role">
                                             <option value="admin">Admin</option>
                                             <option value="user">User</option>
                                         </select>
                                     </div>
 
                                     <!-- Button Simpan -->
-                                    <a href="user.php" type="submit" class="btn btn-primary">Simpan</a>
+                                    <button name="btn-simpan" type="submit" class="btn btn-primary">Simpan</button>
 
                                     <!-- Button Batal -->
                                     <a href="user.php" type="button" class="btn btn-secondary">Batal</a>
@@ -364,8 +375,8 @@ require_once '../conn.php';
                         </div>
                     </div>
 
-
                 </div>
+
                 <!-- /.container-fluid -->
 
             </div>
