@@ -1,7 +1,28 @@
 <?php
 require_once '../conn.php';
 ?>
+<!-- Backend Insert Data -->
+<?php
 
+if (isset($_POST['btn-simpan'])) {
+
+    $nama = htmlspecialchars($_POST['nama']);
+    $deskripsi = htmlspecialchars($_POST['deskripsi']);
+    $lokasi = htmlspecialchars($_POST['lokasi']);
+    $qty = htmlspecialchars($_POST['qty']);
+    $harga = htmlspecialchars($_POST['harga']);
+    $nama_penjual = htmlspecialchars($_POST['nama_penjual']);
+
+    $create = mysqli_query($conn, "INSERT INTO `penjualan`( `nama`, `deskripsi`, `lokasi`, `qty`, `harga`, `nama_penjual`) VALUE ('$nama', '$deskripsi', '$lokasi', '$qty', '$harga', '$nama_penjual')");
+    
+    if ($create) {
+        header( "Location: penjualan.php" );
+    } else {
+        echo mysqli_error($conn);
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -321,30 +342,30 @@ require_once '../conn.php';
                             <div class="card-body">
 
                                 <!-- Form -->
-                                <form action="">
+                                <form action="" method="post">
 
                                     <!-- Input Username -->
                                     <div class="form-group">
                                         <label for="nama">Nama</label>
-                                        <input type="text" class="form-control" id="nama" placeholder="Masukan nama...">
+                                        <input name="nama" type="text" class="form-control" id="nama" placeholder="Masukan nama...">
                                     </div>
 
                                     <!-- Input desc lapangan -->
                                     <div class="form-group">
                                         <label for="desc-penjualan">deskripsi penjualan</label>
-                                        <input type="text" class="form-control" id="desc-penjualan" placeholder="isi deskripsi penjualan...">
+                                        <input name="deskripsi" type="text" class="form-control" id="desc-penjualan" placeholder="isi deskripsi penjualan...">
                                     </div>
 
                                     <!-- Input lokasi -->
                                     <div class="form-group">
                                         <label for="lokasi">Lokasi</label>
-                                        <input type="text" class="form-control" id="lokasi" placeholder="Masukan lokasi...">
+                                        <input name="lokasi" type="text" class="form-control" id="lokasi" placeholder="Masukan lokasi...">
                                     </div>
 
                                     <!-- Input qty -->
                                     <div class="form-group">
                                         <label for="unit">unit</label>
-                                        <select class="form-control" id="unit">
+                                        <select name="qty" class="form-control" id="unit">
                                             <option>1</option>
                                             <option>2</option>
                                             <option>3</option>
@@ -356,17 +377,17 @@ require_once '../conn.php';
                                     <!-- Input harga -->
                                     <div class="form-group">
                                         <label for="harga">harga</label>
-                                        <input type="text" class="form-control" id="harga" placeholder="Masukan harga...">
+                                        <input name="harga" type="text" class="form-control" id="harga" placeholder="Masukan harga...">
                                     </div>
 
                                     <!-- Input nama penjual -->
                                     <div class="form-group">
                                         <label for="nama-penjual">Penjual</label>
-                                        <input type="text" class="form-control" id="nama-penjual" placeholder="nama penjual...">
+                                        <input name="nama_penjual" type="text" class="form-control" id="nama-penjual" placeholder="nama penjual...">
                                     </div>
 
                                     <!-- Button Simpan -->
-                                    <a href="penjualan.php" type="submit" class="btn btn-primary">Simpan</a>
+                                    <button type="submit" name="btn-simpan" class="btn btn-primary">Simpan</button>
 
                                     <!-- Button Batal -->
                                     <a href="penjualan.php" type="button" class="btn btn-secondary">Batal</a>

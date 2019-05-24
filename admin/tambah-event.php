@@ -1,15 +1,5 @@
 <?php
 require_once '../conn.php';
-require 'upload.php';
-
-$gambar = upload();
-
-if (!$gambar) {
-    return false;
-}
-
-$kategoris = mysqli_query($conn, "SELECT * FROM kategori_event");
-
 ?>
 
 <!-- Backend Insert Data -->
@@ -387,10 +377,6 @@ if (isset($_POST['btn-simpan'])) {
                                     </div>
 
                                     <!-- Input gambar -->
-                                    <div class="form-group">
-                                        <label for="exampleFormControlFile1">Poster Event</label>
-                                        <input name="gambar-event" type="file" class="form-control-file" id="exampleFormControlFile1">
-                                    </div>
 
                                     <!-- Input Pembuat -->
                                     <div class="form-group">
