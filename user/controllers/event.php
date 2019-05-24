@@ -129,23 +129,28 @@
 
           </div>
         </div>
-        
+      </div>
+    </div><br>
+    <div class="container">
+      <div class="row">
         <div class="col-md-3">
           <div class="image">
-            <img src="../assets/img/bsk.jpg" style="">
+            <img src="../assets/img/bsk1.jpg" style="">
           </div>
 
         </div>
-        <div class="col-md-6">
-          <div class="description">
-            <h3 class="head-title"><b>3X3 Basketball Unesa Cup 2018</b></h3>
-            <hr class="botm-line">
+        <div class="col-md-6>
+          <div class=" description">
+          <h3 class="head-title"><b>Sport Science Basketball Tournament 2018 3 On 3</b></h3>
+          <hr class="botm-line">
 
-            <p>HALOOO BASKETBALLERS !! Kali ini UKM BOLA BASKET UNESA, mengadakan 3X3 UNESA CUP 2K18. Pertandingan antara umur 18 tahun se-jatim putra dan putri, yang akan diselenggarakan tanggal 14 September 2018. Daftarkan tim kalian sekarang juga, Jangan lupa yah untuk umum loh ini, yuk buruan daftar kuota terbatas. SALAM OLAHRAGAA!! JAYAA!!</p>
+          <p>Terbuka untuk SMK/SMA/MA Sederajat Putra Se – Jawa timur
+            Mengisi formulir pendaftaran dan menyertakan fotocopy Kartu Pelajar 2 lembar, foto 3×4 berwarna 2 lembar
+            Pendaftaran paling lambat 20 April 2018</p>
 
-          </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
   <!---->
