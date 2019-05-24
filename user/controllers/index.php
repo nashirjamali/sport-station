@@ -86,7 +86,7 @@
             </div>
           </div>
           </a>
-          <a href="#">
+          <a href="lapangan.php">
           <div class="col-md-6 wow fadeInRight delay-02s">
             <div class="icon head-title">
               <i class="fa fa-map-marker"></i>
